@@ -180,6 +180,7 @@
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
           <li class="header">TOOLS</li>
+          <li class="pageLink" v-on:click="toggleMenu"><router-link to="/home"><i class="fa fa-table"></i><span class="page">Home</span></router-link></li>
           <li class="active pageLink" v-on:click="toggleMenu"><router-link to="/"><i class="fa fa-desktop"></i><span class="page">Dashboard</span></router-link></li>
           <li class="pageLink" v-on:click="toggleMenu"><router-link to="/demo"><i class="fa fa-desktop"></i><span class="page">Demo</span></router-link></li>
           <li class="pageLink" v-on:click="toggleMenu"><router-link to="/tables"><i class="fa fa-table"></i><span class="page">Tables</span></router-link></li>

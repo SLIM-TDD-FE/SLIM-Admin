@@ -11,6 +11,7 @@ import AccessView from './components/dash/Access.vue'
 import ServerView from './components/dash/Server.vue'
 import ReposView from './components/dash/Repos.vue'
 import DemoView from './components/dash/Demo.vue'
+import HomeView from './components/dash/Home.vue'
 
 // Routes
 const routes = [
@@ -32,6 +33,11 @@ const routes = [
         component: TablesView,
         name: 'Tables',
         meta: {description: 'Simple and advance table in CoPilot'}
+      }, {
+        path: '/home',
+        component: HomeView,
+        name: 'Home',
+        meta: {description: 'Home!!!'}
       }, {
         path: '/tasks',
         component: TasksView,
