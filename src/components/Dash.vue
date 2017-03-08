@@ -17,6 +17,31 @@
         <a href="javascript:;" class="sidebar-toggle" data-toggle="offcanvas" role="button">
           <span class="sr-only">Toggle navigation</span>
         </a>
+        <!-- Navbar Left Menu -->
+        <div class="pull-left">
+          <ul class="nav navbar-nav">
+            <li class="dropdown messages-menu">
+              <a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">
+                <i class="fa">主页</i>
+              </a>
+              </li>
+            <li class="dropdown notifications-menu">
+              <a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle">
+                <i class="fa">报告</i>
+              </a>
+            </li>
+            <li class="dropdown tasks-menu">
+              <a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle">
+                <i class="fa">自定义</i>
+              </a>
+            </li>
+            <li class="dropdown user user-menu">
+              <a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle">
+                <i class="fa">设置</i>
+              </a>
+            </li>
+          </ul>
+        </div>
         <!-- Navbar Right Menu -->
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
