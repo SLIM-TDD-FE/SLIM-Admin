@@ -10,6 +10,7 @@ import SettingView from './components/dash/Setting.vue'
 import AccessView from './components/dash/Access.vue'
 import ServerView from './components/dash/Server.vue'
 import ReposView from './components/dash/Repos.vue'
+import DemoView from './components/dash/Demo.vue'
 
 // Routes
 const routes = [
@@ -36,6 +37,11 @@ const routes = [
         component: TasksView,
         name: 'Tasks',
         meta: {description: 'Tasks page in the form of a timeline'}
+      }, {
+        path: '/demo',
+        component: DemoView,
+        name: 'Demos',
+        meta: {description: 'Demo!!!!'}
       }, {
         path: '/setting',
         component: SettingView,
