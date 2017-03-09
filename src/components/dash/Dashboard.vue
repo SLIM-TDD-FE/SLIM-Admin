@@ -23,6 +23,12 @@
     </div>
     <!-- 国家分布 -->
     <div class="row">
+      <div class="col-xs-12 btn-group" role="group">
+        <button type="button" class="btn btn-default">来源</button>
+        <button type="button" class="btn btn-default">国籍</button>
+      </div>
+    </div>
+    <div class="row">
       <div id="couz" style="height:400px"></div>
     </div>
     <!-- GC分布 -->
@@ -54,15 +60,14 @@
             <p>total arrivals <i v-bind:title="textAll[4]" class="fa fa-question-circle"></i></p>
             <p class="BoldFont">1000</p>
           </div>
-          <div class="col-xs-4 GCCount">
-            <p>total arrivals <i v-bind:title="textAll[5]" class="fa fa-question-circle"></i></p>
-            <p class="BoldFont">1000</p>
-          </div>
         </div>
       </div>
     </div>
     <div class="row">
       <div id="ddz" style="height:400px;"></div>
+    </div>
+    <div class="row">
+      <div id="xfz" style="height:400px;"></div>
     </div>
     <div class="row">
       <div id="plz" style="height:400px;"></div>
@@ -362,6 +367,20 @@ module.exports = {
       series: [{
         barMaxWidth: '70',
         name: '人数',
+        stack: 'aaa',
+        label: {
+          normal: {
+            show: true,
+            position: 'inside',
+            formatter: '{c}%'
+          }
+        },
+        type: 'bar',
+        data: ['15', '13', '11', '7.5', '3']
+      }, {
+        barMaxWidth: '70',
+        name: '人数1',
+        stack: 'aaa',
         label: {
           normal: {
             show: true,
@@ -527,6 +546,37 @@ module.exports = {
       }]
     }
     ddzChart.setOption(ddzOption)
+
+    // 堆叠柱形图
+    var xfzChart = Echarts.init(document.getElementById('xfz'))
+    var xfzOption = {
+      title: {
+        text: 'GC消费分配',
+        left: 'center',
+        top: 'top'
+      },
+      tooltip: {},
+      legend: {
+        data: ['GC', '非GC'],
+        top: '30'
+      },
+      xAxis: {
+        type: 'category',
+        data: ['0-500', '500-1000', '1000-2000', '2000-5000', '5000-10000', '10000-20000', '20000+']
+      },
+      yAxis: {},
+      series: [{
+        barWidth: '40',
+        name: 'GC',
+        type: 'bar',
+        data: [5, 20, 25, 34, 12, 4, 8]
+      }, {
+        name: '非GC',
+        type: 'bar',
+        data: [7, 34, 76, 12, 35, 11, 90]
+      }]
+    }
+    xfzChart.setOption(xfzOption)
 
     // 堆叠柱形图
     var plzChart = Echarts.init(document.getElementById('plz'))
@@ -770,8 +820,8 @@ module.exports = {
   padding-left: 20px;
   margin-top: 40px;
 }
-.GCCount:not(:nth-child(3n)){
-  border-right: 1px #000 solid;
+.GCCount:not(:nth-child(3n+1)){
+  border-left: 1px #000 solid;
 }
 .BoldFont{
   font-size: 25px;

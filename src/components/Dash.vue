@@ -181,6 +181,7 @@
         <ul class="sidebar-menu">
           <li class="header">TOOLS</li>
           <li class="pageLink" v-on:click="toggleMenu"><router-link to="/home"><i class="fa fa-table"></i><span class="page">Home</span></router-link></li>
+          <li class="pageLink" v-on:click="toggleMenu"><router-link to="/menu"><i class="fa fa-table"></i><span class="page">Menu</span></router-link></li>
           <li class="pageLink" v-on:click="toggleMenu"><router-link to="/"><i class="fa fa-desktop"></i><span class="page">Dashboard</span>
               <i class="fa fa-angle-left pull-right"></i></router-link>
           <ul class="treeview-menu menu-open">

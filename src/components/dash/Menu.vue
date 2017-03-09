@@ -4,114 +4,6 @@
       <div class="col-xs-12">
         <div class="box">
           <div class="box-header">
-            <div class="btn-group" role="group">
-              <button type="button" class="btn btn-default">Yesterday</button>
-              <button type="button" class="btn btn-default">MTD</button>
-              <button type="button" class="btn btn-default">YTD</button>
-            </div>
-          </div>
-          <!-- /.box-header -->
-          <div class="box-body table-responsive">
-            <table class="table table-bordered text-center">
-              <tbody>
-                <tr>
-                    <th rowspan="2">Hotels</th>
-                    <th>Total</th>
-                    <th colspan="2">Rooms</th>
-                    <th colspan="2">Events</th>
-                    <th colspan="2">Rooms</th>
-                    <th colspan="2">Events</th>
-                </tr>
-                <tr>
-                    <th>Revenue</th>
-                    <th>1</th>
-                    <th>2</th>
-                    <th>1</th>
-                    <th>2</th>
-                    <th>1</th>
-                    <th>2</th>
-                    <th>1</th>
-                    <th>2</th>
-                </tr>
-                <tr>
-                    <td rowspan="3">Shangri-la Hotel</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                </tr>
-                <tr>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                </tr>
-                <tr>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                </tr>
-                <tr>
-                    <td rowspan="3">Shangri-la Hotel</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                </tr>
-                <tr>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                </tr>
-                <tr>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <!-- /.box-body -->
-        </div>
-      </div>
-    </div>
-    <div class="row totalTable">
-      <div class="col-xs-12">
-        <div class="box">
-          <div class="box-header">
             <h3>11111</h3>
             <div class="btn-group" role="group">
               <button type="button" class="btn btn-default">Yesterday</button>
@@ -119,15 +11,22 @@
               <button type="button" class="btn btn-default">YTD</button>
             </div>
           </div>
-          <div class="box-body">
+          <ul class="nav nav-tabs">
+            <li role="presentation" :class="page == 0 ? 'active' : ''" @click="goPage(0)"><a href="#">Home</a></li>
+            <li role="presentation" :class="page == 1 ? 'active' : ''" @click="goPage(1)"><a href="#">Profile</a></li>
+          </ul>
+          <div class="box-body" v-show="page == 0">
             <div class="row">
               <div class="col-xs-4">
                 <div id="pie1" style="height:400px"></div>
               </div>
               <div class="col-xs-8">
-                <div id="bar1" style="height:400px"></div>
+                <div id="pop1" style="height:400px"></div>
               </div>
             </div>
+          </div>
+          <div class="box-body" v-show="page == 1">
+            1111
           </div>
         </div>
       </div>
@@ -166,7 +65,9 @@ import Echarts from 'echarts'
 
 module.exports = {
   data: function () {
-    return {}
+    return {
+      page: 0
+    }
   },
   mounted: function () {
     // Revenue占比
@@ -207,8 +108,8 @@ module.exports = {
     }
     pie1Chart.setOption(pie1Option)
 
-    var bar1Chart = Echarts.init(document.getElementById('bar1'))
-    var bar1Option = {
+    var pop1Chart = Echarts.init(document.getElementById('pop1'))
+    var pop1Option = {
       tooltip: {
         trigger: 'axis',
         axisPointer: {            // 坐标轴指示器，坐标轴触发有效
@@ -217,7 +118,7 @@ module.exports = {
       },
       legend: {
         show: false,
-        data: ['利润', '支出', '收入']
+        data: ['利润', '支出']
       },
       xAxis: [
         {
@@ -226,49 +127,28 @@ module.exports = {
       ],
       yAxis: [
         {
-          type: 'category',
-          axisTick: {show: false},
-          data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+          type: 'value'
         }
       ],
       series: [
         {
           name: '利润',
-          type: 'bar',
-          label: {
-            normal: {
-              show: true,
-              position: 'inside'
-            }
+          type: 'scatter',
+          symbolSize: function (data) {
+            return (data[2] / 10)
           },
-          data: [200, 170, 240, 244, 200, 220, 210]
-        },
-        {
-          name: '收入',
-          type: 'bar',
-          stack: '总量',
-          label: {
-            normal: {
-              show: true
-            }
-          },
-          data: [320, 302, 341, 374, 390, 450, 420]
-        },
-        {
+          data: [[20, 17, 240], [24, 20, 220]]
+        }, {
           name: '支出',
-          type: 'bar',
-          stack: '总量',
-          label: {
-            normal: {
-              show: true,
-              position: 'left'
-            }
+          type: 'scatter',
+          symbolSize: function (data) {
+            return (data[2] / 10)
           },
-          data: [-120, -132, -101, -134, -190, -230, -210]
+          data: [[20, 70, 240], [44, 20, 220]]
         }
       ]
     }
-    bar1Chart.setOption(bar1Option)
+    pop1Chart.setOption(pop1Option)
 
     // 折线混合
     var zh1Chart = Echarts.init(document.getElementById('zh1'))
@@ -406,6 +286,13 @@ module.exports = {
       }]
     }
     subzChart.setOption(subzOption)
+  },
+  methods: {
+    goPage: function (index, event) {
+      console.log(index)
+      this.page = index
+      console.log(this)
+    }
   }
 }
 </script>

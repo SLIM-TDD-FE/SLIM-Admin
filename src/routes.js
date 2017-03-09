@@ -12,6 +12,7 @@ import ServerView from './components/dash/Server.vue'
 import ReposView from './components/dash/Repos.vue'
 import DemoView from './components/dash/Demo.vue'
 import HomeView from './components/dash/Home.vue'
+import MenuView from './components/dash/Menu.vue'
 
 // Routes
 const routes = [
@@ -38,6 +39,11 @@ const routes = [
         component: HomeView,
         name: 'Home',
         meta: {description: 'Home!!!'}
+      }, {
+        path: '/menu',
+        component: MenuView,
+        name: 'Menu',
+        meta: {description: 'Menu!!!'}
       }, {
         path: '/tasks',
         component: TasksView,
