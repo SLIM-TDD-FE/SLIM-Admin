@@ -179,8 +179,73 @@
 
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
-          <li class="header">TOOLS</li>
-          <li class="pageLink" v-on:click="toggleMenu"><router-link to="/home"><i class="fa fa-table"></i><span class="page">Home</span></router-link></li>
+          <li class="header">Report</li>
+          <li class="pageLink" v-on:click="toggleMenu">
+            <router-link to="/overview">
+              <i class="fa fa-table"></i>
+              <span class="page">Overview</span>
+            </router-link>
+          </li>
+          <li class="pageLink" v-on:click="toggleMenu">
+            <router-link to="">
+              <i class="fa fa-table"></i>
+              <span class="page">F&B</span>
+              <i class="fa fa-angle-left pull-right"></i>
+            </router-link>
+            <ul class="treeview-menu menu-open">
+              <li class="pageLink" v-on:click="toggleMenu">
+                <router-link to="/summary">
+                  <i class="fa fa-circle-o"></i>
+                  <span class="page">Summary</span>
+                </router-link>
+              </li>
+              <li class="pageLink" v-on:click="toggleMenu">
+                <router-link to="/menu">
+                  <i class="fa fa-circle-o"></i>
+                  <span class="page">Menu</span>
+                </router-link>
+              </li>
+              <!-- <li class="pageLink" v-on:click="toggleMenu">
+                <router-link to="/period">
+                  <i class="fa fa-circle-o"></i>
+                  <span class="page">Hot/Cold Period</span>
+                </router-link>
+              </li> -->
+              <li class="pageLink" v-on:click="toggleMenu">
+                <router-link to="/FBSatis">
+                  <i class="fa fa-circle-o"></i>
+                  <span class="page">F&B Satisfaction</span>
+                </router-link>
+              </li>
+            </ul>
+          </li>
+          <li class="pageLink" v-on:click="toggleMenu">
+            <router-link to="">
+              <i class="fa fa-table"></i>
+              <span class="page">Customer</span>
+              <i class="fa fa-angle-left pull-right"></i>
+            </router-link>
+            <ul class="treeview-menu menu-open">
+              <li class="pageLink" v-on:click="toggleMenu">
+                <router-link to="/property">
+                  <i class="fa fa-circle-o"></i>
+                  <span class="page">Property</span>
+                </router-link>
+              </li>
+              <li class="pageLink" v-on:click="toggleMenu">
+                <router-link to="/GC">
+                  <i class="fa fa-circle-o"></i>
+                  <span class="page">GC</span>
+                </router-link>
+              </li>
+            </ul>
+          </li>
+          <!-- <li class="pageLink" v-on:click="toggleMenu">
+            <router-link to="/home">
+              <i class="fa fa-table"></i>
+              <span class="page">Home</span>
+            </router-link>
+          </li>
           <li class="pageLink" v-on:click="toggleMenu"><router-link to="/menu"><i class="fa fa-table"></i><span class="page">Menu</span></router-link></li>
           <li class="pageLink" v-on:click="toggleMenu"><router-link to="/"><i class="fa fa-desktop"></i><span class="page">Dashboard</span>
               <i class="fa fa-angle-left pull-right"></i></router-link>
@@ -201,7 +266,7 @@
 
           <li class="header">PAGES</li>
           <li class="pageLink" v-on:click="toggleMenu"><router-link to="/login"><i class="fa fa-circle-o text-yellow"></i> <span class="page">Login</span></router-link></li>
-          <li class="pageLink" v-on:click="toggleMenu"><router-link to="/404"><i class="fa fa-circle-o text-red"></i> <span class="page">404</span></router-link></li>
+          <li class="pageLink" v-on:click="toggleMenu"><router-link to="/404"><i class="fa fa-circle-o text-red"></i> <span class="page">404</span></router-link></li> -->
         </ul>
         <!-- /.sidebar-menu -->
       </section>

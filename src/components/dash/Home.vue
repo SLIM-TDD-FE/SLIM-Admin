@@ -108,57 +108,6 @@
         </div>
       </div>
     </div>
-    <div class="row totalTable">
-      <div class="col-xs-12">
-        <div class="box">
-          <div class="box-header">
-            <h3>11111</h3>
-            <div class="btn-group" role="group">
-              <button type="button" class="btn btn-default">Yesterday</button>
-              <button type="button" class="btn btn-default">MTD</button>
-              <button type="button" class="btn btn-default">YTD</button>
-            </div>
-          </div>
-          <div class="box-body">
-            <div class="row">
-              <div class="col-xs-4">
-                <div id="pie1" style="height:400px"></div>
-              </div>
-              <div class="col-xs-8">
-                <div id="bar1" style="height:400px"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row totalTable">
-      <div class="col-xs-12">
-        <div class="box">
-          <div class="box-header">
-            <h3>11111</h3>
-            <div class="btn-group" role="group">
-              <button type="button" class="btn btn-default">Yesterday</button>
-              <button type="button" class="btn btn-default">MTD</button>
-              <button type="button" class="btn btn-default">YTD</button>
-            </div>
-          </div>
-          <div class="box-body">
-            <div class="row">
-              <div class="col-xs-12">
-                <div id="zh1" style="height:400px"></div>
-              </div>
-              <div class="col-xs-12">
-                <div id="zh2" style="height:400px"></div>
-              </div>
-              <div class="col-xs-12">
-                <div id="subz" style="height:400px"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 </template>
 <script>

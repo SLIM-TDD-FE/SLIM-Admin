@@ -13,6 +13,12 @@ import ReposView from './components/dash/Repos.vue'
 import DemoView from './components/dash/Demo.vue'
 import HomeView from './components/dash/Home.vue'
 import MenuView from './components/dash/Menu.vue'
+import OverviewView from './components/dash/Overview.vue'
+import SummaryView from './components/dash/Summary.vue'
+import PeriodView from './components/dash/Period.vue'
+import FBSatisView from './components/dash/FBSatis.vue'
+import PropertyView from './components/dash/Property.vue'
+import GCView from './components/dash/GC.vue'
 
 // Routes
 const routes = [
@@ -25,7 +31,12 @@ const routes = [
     auth: true,
     children: [
       {
-        path: '',
+        path: '/',
+        component: HomeView,
+        name: 'Home',
+        meta: {description: 'Overview of environment'}
+      }, {
+        path: '/dashboard',
         component: DashboardView,
         name: 'Dashboard',
         meta: {description: 'Overview of environment'}
@@ -43,6 +54,36 @@ const routes = [
         path: '/menu',
         component: MenuView,
         name: 'Menu',
+        meta: {description: 'Menu!!!'}
+      }, {
+        path: '/overview',
+        component: OverviewView,
+        name: 'Overview',
+        meta: {description: 'Menu!!!'}
+      }, {
+        path: '/summary',
+        component: SummaryView,
+        name: 'Summary',
+        meta: {description: 'Menu!!!'}
+      }, {
+        path: '/period',
+        component: PeriodView,
+        name: 'Period',
+        meta: {description: 'Menu!!!'}
+      }, {
+        path: '/FBSatis',
+        component: FBSatisView,
+        name: 'FBSatis',
+        meta: {description: 'Menu!!!'}
+      }, {
+        path: '/property',
+        component: PropertyView,
+        name: 'Property',
+        meta: {description: 'Menu!!!'}
+      }, {
+        path: '/GC',
+        component: GCView,
+        name: 'GC',
         meta: {description: 'Menu!!!'}
       }, {
         path: '/tasks',
