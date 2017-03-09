@@ -73,6 +73,47 @@
       <div id="plz" style="height:400px;"></div>
     </div>
     <div class="row">
+      <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand">时间：</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <form class="navbar-form navbar-left">
+            <div class="btn-group" role="group" aria-label="...">
+              <button type="button" class="btn btn-default">最近30天</button>
+              <button type="button" class="btn btn-default">最近2个月</button>
+              <button type="button" class="btn btn-default">最近3个月</button>
+              <button type="button" class="btn btn-default">最近6个月</button>
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  选择月份
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">一月</a></li>
+                  <li><a href="#">二月</a></li>
+                  <li><a href="#">三月</a></li>
+                  <li><a href="#">四月</a></li>
+                  <li><a href="#">五月</a></li>
+                  <li><a href="#">六月</a></li>
+                  <li><a href="#">七月</a></li>
+                  <li><a href="#">八月</a></li>
+                  <li><a href="#">九月</a></li>
+                  <li><a href="#">十月</a></li>
+                  <li><a href="#">十一月</a></li>
+                  <li><a href="#">十二月</a></li>
+                </ul>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+
+
       <div id="cpq" style="height:400px;"></div>
     </div>
     <!-- 雷达 / 折线堆叠 -->
