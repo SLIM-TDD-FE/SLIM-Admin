@@ -1,5 +1,42 @@
 <template>
   <section class="content">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">时间：</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <form class="navbar-form navbar-left">
+        <div class="btn-group" role="group" aria-label="...">
+          <button type="button" class="btn btn-default">最近30天</button>
+          <button type="button" class="btn btn-default">最近2个月</button>
+          <button type="button" class="btn btn-default">最近3个月</button>
+          <button type="button" class="btn btn-default">最近6个月</button>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              选择月份
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">一月</a></li>
+              <li><a href="#">二月</a></li>
+              <li><a href="#">三月</a></li>
+              <li><a href="#">四月</a></li>
+              <li><a href="#">五月</a></li>
+              <li><a href="#">六月</a></li>
+              <li><a href="#">七月</a></li>
+              <li><a href="#">八月</a></li>
+              <li><a href="#">九月</a></li>
+              <li><a href="#">十月</a></li>
+              <li><a href="#">十一月</a></li>
+              <li><a href="#">十二月</a></li>
+            </ul>
+          </div>
+        </div>
+      </form>
+    </div>
+    </div>
+  </nav>
     <!-- 年龄区间 / 性别比例 -->
     <div class="row">
       <div class="col-xs-4">
@@ -61,7 +98,7 @@ module.exports = {
   },
   mounted: function () {
     // 年龄分布
-    var ageGCChart = Echarts.init(document.getElementById('ageGC'))
+    var ageGCChart = Echarts.init(document.getElementById('ageGC'), 'walden')
     var ageGCOption = {
       tooltip: {
         trigger: 'item',
@@ -127,7 +164,7 @@ module.exports = {
     ageGCChart.setOption(ageGCOption)
 
     // 性别GC柱形图
-    var faleGCChart = Echarts.init(document.getElementById('faleGC'))
+    var faleGCChart = Echarts.init(document.getElementById('faleGC'), 'walden')
     var faleGCOption = {
       title: {
         text: '性别分布',
@@ -162,7 +199,7 @@ module.exports = {
     faleGCChart.setOption(faleGCOption)
 
     // 商旅休闲GC柱形图
-    var purGCChart = Echarts.init(document.getElementById('purGC'))
+    var purGCChart = Echarts.init(document.getElementById('purGC'), 'walden')
     var purGCOption = {
       title: {
         text: '商旅/休闲分布',
@@ -197,7 +234,7 @@ module.exports = {
     purGCChart.setOption(purGCOption)
 
     // 职业占比排名
-    var subzChart = Echarts.init(document.getElementById('subz'))
+    var subzChart = Echarts.init(document.getElementById('subz'), 'walden')
     var subzOption = {
       title: {
         text: '职业分布',
@@ -205,12 +242,12 @@ module.exports = {
         top: 'top'
       },
       tooltip: {
-        formatter: '{b}{a}\n{c}%'
+        // formatter: '{b}{a}\n{c}%'
       },
-      // legend: {
-      //   data: ['人数'],
-      //   top: '30'
-      // },
+      legend: {
+        data: ['GC', 'Non GC'],
+        top: '30'
+      },
       xAxis: {
         type: 'category',
         data: ['IT', '政府', '教育', '餐饮', '媒体', '房地产', '金融', '保险', '医疗', '电信']
@@ -251,7 +288,7 @@ module.exports = {
     subzChart.setOption(subzOption)
 
     // 兴趣占比排名
-    var inzChart = Echarts.init(document.getElementById('inz'))
+    var inzChart = Echarts.init(document.getElementById('inz'), 'walden')
     var inzOption = {
       title: {
         text: '兴趣分布',
@@ -261,10 +298,10 @@ module.exports = {
       tooltip: {
         formatter: '{b}{a}\n{c}%'
       },
-      // legend: {
-      //   data: ['人数'],
-      //   top: '30'
-      // },
+      legend: {
+        data: ['GC', 'Non GC'],
+        top: '30'
+      },
       xAxis: {
         type: 'category',
         data: ['旅游', '摄影', '游戏', '音乐', '运动', '饮食', '书籍', '视频', '品茶', '棋牌']
@@ -305,7 +342,7 @@ module.exports = {
     inzChart.setOption(inzOption)
 
     // 兴趣占比排名
-    var couzChart = Echarts.init(document.getElementById('couz'))
+    var couzChart = Echarts.init(document.getElementById('couz'), 'walden')
     var couzOption = {
       title: {
         text: 'TOP10国家分布',
@@ -315,10 +352,10 @@ module.exports = {
       tooltip: {
         formatter: '{b}{a}\n{c}%'
       },
-      // legend: {
-      //   data: ['人数'],
-      //   top: '30'
-      // },
+      legend: {
+        data: ['GC', 'Non GC'],
+        top: '30'
+      },
       xAxis: {
         type: 'category',
         data: ['中国', '美国', '日本', '德国', '法国', '英国', '西班牙', '韩国', '马来西亚', '新加坡']

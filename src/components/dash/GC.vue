@@ -38,9 +38,6 @@
     <div class="row">
       <div id="xfz" style="height:400px;"></div>
     </div>
-    <div class="row">
-      <div id="plz" style="height:400px;"></div>
-    </div>
   </section>
 </template>
 <script>
@@ -72,7 +69,7 @@ module.exports = {
   },
   mounted: function () {
     // GC占比分配
-    var myChart1 = Echarts.init(document.getElementById('bing01'))
+    var myChart1 = Echarts.init(document.getElementById('bing01'), 'walden')
     var option1 = {
       tooltip: {
         trigger: 'item',
@@ -112,7 +109,7 @@ module.exports = {
     myChart1.setOption(option1)
 
     // 堆叠柱形图
-    var ddzChart = Echarts.init(document.getElementById('ddz'))
+    var ddzChart = Echarts.init(document.getElementById('ddz'), 'walden')
     var ddzOption = {
       title: {
         text: 'GC来源分布',
@@ -145,7 +142,7 @@ module.exports = {
     ddzChart.setOption(ddzOption)
 
     // 堆叠柱形图
-    var xfzChart = Echarts.init(document.getElementById('xfz'))
+    var xfzChart = Echarts.init(document.getElementById('xfz'), 'walden')
     var xfzOption = {
       title: {
         text: 'GC消费分配',
@@ -174,35 +171,6 @@ module.exports = {
       }]
     }
     xfzChart.setOption(xfzOption)
-
-    // 堆叠柱形图
-    var plzChart = Echarts.init(document.getElementById('plz'))
-    var plzOption = {
-      title: {
-        text: '入住频率统计',
-        left: 'center',
-        top: 'top'
-      },
-      tooltip: {
-        formatter: '{c}'
-      },
-      // legend: {
-      //   data: ['人数'],
-      //   top: '30'
-      // },
-      xAxis: {
-        type: 'category',
-        data: ['1天', '2天', '3天', '4天', '5天', '5天以上']
-      },
-      yAxis: {},
-      series: [{
-        barMaxWidth: '70',
-        name: 'GC',
-        type: 'bar',
-        data: [5, 20, 25, 34, 12, 4]
-      }]
-    }
-    plzChart.setOption(plzOption)
   }
 }
 </script>
@@ -213,8 +181,6 @@ module.exports = {
 .GCCount{
   padding-left: 20px;
   margin-top: 40px;
-}
-.GCCount:not(:nth-child(3n+1)){
   border-left: 1px #000 solid;
 }
 .BoldFont{
