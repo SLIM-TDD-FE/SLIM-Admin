@@ -72,7 +72,7 @@ module.exports = {
   },
   mounted: function () {
     // GC占比分配
-    var myChart1 = Echarts.init(document.getElementById('bing01'))
+    var myChart1 = Echarts.init(document.getElementById('bing01'), 'infographic')
     var option1 = {
       tooltip: {
         trigger: 'item',
@@ -112,7 +112,7 @@ module.exports = {
     myChart1.setOption(option1)
 
     // 堆叠柱形图
-    var ddzChart = Echarts.init(document.getElementById('ddz'))
+    var ddzChart = Echarts.init(document.getElementById('ddz'), 'infographic')
     var ddzOption = {
       title: {
         text: '各来源GC占比分配',
@@ -145,7 +145,7 @@ module.exports = {
     ddzChart.setOption(ddzOption)
 
     // 堆叠柱形图
-    var xfzChart = Echarts.init(document.getElementById('xfz'))
+    var xfzChart = Echarts.init(document.getElementById('xfz'), 'infographic')
     var xfzOption = {
       title: {
         text: 'GC消费分配',
@@ -176,7 +176,7 @@ module.exports = {
     xfzChart.setOption(xfzOption)
 
     // 堆叠柱形图
-    var plzChart = Echarts.init(document.getElementById('plz'))
+    var plzChart = Echarts.init(document.getElementById('plz'), 'infographic')
     var plzOption = {
       title: {
         text: '入住频率统计',

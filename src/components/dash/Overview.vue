@@ -62,7 +62,7 @@ module.exports = {
   },
   mounted: function () {
     // Revenue占比
-    var pie1Chart = Echarts.init(document.getElementById('pie1'))
+    var pie1Chart = Echarts.init(document.getElementById('pie1'), 'walden')
     var pie1Option = {
       tooltip: {
         trigger: 'item',
@@ -99,7 +99,7 @@ module.exports = {
     }
     pie1Chart.setOption(pie1Option)
 
-    var bar1Chart = Echarts.init(document.getElementById('bar1'))
+    var bar1Chart = Echarts.init(document.getElementById('bar1'), 'walden')
     var bar1Option = {
       tooltip: {
         trigger: 'axis',
@@ -163,7 +163,7 @@ module.exports = {
     bar1Chart.setOption(bar1Option)
 
     // 折线混合
-    var zh1Chart = Echarts.init(document.getElementById('zh1'))
+    var zh1Chart = Echarts.init(document.getElementById('zh1'), 'walden')
     var zh1Option = {
       xAxis: [{
         data: ['2010', '2011', '2012', '2013']
@@ -205,7 +205,7 @@ module.exports = {
     }
     zh1Chart.setOption(zh1Option)
 
-    var zh2Chart = Echarts.init(document.getElementById('zh2'))
+    var zh2Chart = Echarts.init(document.getElementById('zh2'), 'walden')
     var zh2Option = {
       xAxis: [{
         data: ['2010', '2011', '2012', '2013']
@@ -248,7 +248,7 @@ module.exports = {
     zh2Chart.setOption(zh2Option)
 
     // 职业占比排名
-    var subzChart = Echarts.init(document.getElementById('subz'))
+    var subzChart = Echarts.init(document.getElementById('subz'), 'walden')
     var subzOption = {
       title: {
         text: '职业占比排名',

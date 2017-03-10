@@ -2,6 +2,7 @@
 import Vue from 'vue'
 import Resource from 'vue-resource'
 import VueRouter from 'vue-router'
+import Echart from 'echarts'
 
 import routes from './routes'
 import store from './store'
@@ -12,6 +13,16 @@ import { domain, count, prettyDate, pluralize } from './filters'
 // Import Views - Top level
 
 import AppView from './components/App.vue'
+
+// require('echarts')
+require('../node_modules/echarts/theme/dark.js')
+require('../node_modules/echarts/theme/halloween.js')
+require('../node_modules/echarts/theme/infographic.js')
+require('../node_modules/echarts/theme/macarons.js')
+require('../node_modules/echarts/theme/roma.js')
+require('../node_modules/echarts/theme/shine.js')
+require('../node_modules/echarts/theme/vintage.js')
+require('../static/js/walden.js')
 
 // Import Install and register helper items
 Vue.filter('count', count)
