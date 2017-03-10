@@ -8,26 +8,26 @@
       <div class="col-xs-6 GCCountBlock">
         <div class="row">
           <div class="col-xs-4 GCCount">
-            <p>total arrivals <i v-bind:title="textAll[0]" class="fa fa-question-circle"></i></p>
+            <p>Total arrivals <i v-bind:title="textAll[0]" class="fa fa-question-circle"></i></p>
             <p class="BoldFont">1000</p>
           </div>
           <div class="col-xs-4 GCCount">
-            <p>total arrivals <i v-bind:title="textAll[1]" class="fa fa-question-circle"></i></p>
-            <p class="BoldFont">1000</p>
+            <p>GC arrivals <i v-bind:title="textAll[1]" class="fa fa-question-circle"></i></p>
+            <p class="BoldFont">500</p>
           </div>
           <div class="col-xs-4 GCCount">
-            <p>total arrivals <i v-bind:title="textAll[2]" class="fa fa-question-circle"></i></p>
-            <p class="BoldFont">1000</p>
+            <p>New GC arrivals <i v-bind:title="textAll[2]" class="fa fa-question-circle"></i></p>
+            <p class="BoldFont">100</p>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-4 GCCount">
-            <p>total arrivals <i v-bind:title="textAll[3]" class="fa fa-question-circle"></i></p>
-            <p class="BoldFont">1000</p>
+          <div class="row">
           </div>
           <div class="col-xs-4 GCCount">
-            <p>total arrivals <i v-bind:title="textAll[4]" class="fa fa-question-circle"></i></p>
-            <p class="BoldFont">1000</p>
+            <p>Total guests <i v-bind:title="textAll[3]" class="fa fa-question-circle"></i></p>
+            <p class="BoldFont">1500</p>
+          </div>
+          <div class="col-xs-4 GCCount">
+            <p>GC guests <i v-bind:title="textAll[4]" class="fa fa-question-circle"></i></p>
+            <p class="BoldFont">600</p>
           </div>
         </div>
       </div>
@@ -87,7 +87,7 @@ module.exports = {
       },
       series: [
         {
-          name: 'GC占比分配',
+          name: 'GC占比',
           type: 'pie',
           // selectedMode: 'single',
           // radius: [0, '30%'],
@@ -103,8 +103,8 @@ module.exports = {
             }
           },
           data: [
-            {value: 335, name: 'GC'},
-            {value: 679, name: '非GC'}
+            {value: 80, name: 'GC'},
+            {value: 20, name: '非GC'}
           ]
         }
       ]
@@ -115,7 +115,7 @@ module.exports = {
     var ddzChart = Echarts.init(document.getElementById('ddz'), 'infographic')
     var ddzOption = {
       title: {
-        text: '各来源GC占比分配',
+        text: 'GC来源分布',
         left: 'center',
         top: 'top'
       },
@@ -126,7 +126,7 @@ module.exports = {
       },
       xAxis: {
         type: 'category',
-        data: ['网站', 'OTA', 'Other', 'Other1', 'Other2', 'Other3', 'Other4']
+        data: ['Negotiated', 'Public rate', 'Wholesale Offline', 'Packages', 'Wholesale Online', 'Long Stay', 'Individual Others', 'Meetings/Incentives', 'Group Others', 'Tours', 'House Use', 'Permanent', 'Complimentary']
       },
       yAxis: {},
       series: [{
@@ -134,12 +134,12 @@ module.exports = {
         name: 'GC',
         type: 'bar',
         stack: '细分统计',
-        data: [5, 20, 25, 34, 12, 4, 8]
+        data: [89, 35, 90, 46, 13, 35, 30, 9, 27, 21, 22, 10, 12]
       }, {
         name: '非GC',
         type: 'bar',
         stack: '细分统计',
-        data: [7, 34, 76, 12, 35, 11, 90]
+        data: [45, 76, 8, 40, 55, 17, 19, 34, 13, 11, 5, 10, 7]
       }]
     }
     ddzChart.setOption(ddzOption)
@@ -159,18 +159,18 @@ module.exports = {
       },
       xAxis: {
         type: 'category',
-        data: ['0-500', '500-1000', '1000-2000', '2000-5000', '5000-10000', '10000-20000', '20000+']
+        data: ['0-999', '1000-2999', '3000-4999', '5000-7999', '8000-9999', '10000-19999', '20000+']
       },
       yAxis: {},
       series: [{
         barWidth: '40',
         name: 'GC',
         type: 'bar',
-        data: [5, 20, 25, 34, 12, 4, 8]
+        data: [5, 50, 60, 65, 34, 10, 8]
       }, {
         name: '非GC',
         type: 'bar',
-        data: [7, 34, 76, 12, 35, 11, 90]
+        data: [30, 40, 20, 15, 5, 4, 2]
       }]
     }
     xfzChart.setOption(xfzOption)

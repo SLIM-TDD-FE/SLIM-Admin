@@ -19,14 +19,14 @@
                     <th>Total</th>
                     <th colspan="2">Rooms</th>
                     <th colspan="2">Events</th>
-                    <th colspan="2">Rooms</th>
-                    <th colspan="2">Events</th>
+                    <th colspan="2">F&B</th>
+                    <th colspan="2">OOD</th>
                 </tr>
                 <tr>
                     <th>Revenue</th>
                     <th>1</th>
                     <th>2</th>
-                    <th>1</th>
+                    <th>3</th>
                     <th>2</th>
                     <th>1</th>
                     <th>2</th>

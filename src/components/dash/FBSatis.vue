@@ -72,51 +72,58 @@
                   <th>酒店</th>
                   <th>设施</th>
                   <th>卫生</th>
+                  <th>位置</th>
                 </tr>
                 <tr>
-                  <td>西餐厅</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
+                  <td>鹤日本料理</td>
+                  <td>9.2</td>
+                  <td>8.0</td>
+                  <td>3.3</td>
+                  <td>9.2</td>
+                  <td>7.8</td>
+                  <td>10</td>
+                  <td>10</td>
                 </tr>
                 <tr>
-                  <td>中餐厅</td>
+                  <td>两咖啡</td>
+                  <td>7.8</td>
+                  <td>7.8</td>
+                  <td>8.3</td>
                   <td>8.6</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
+                  <td>8.9</td>
+                  <td>10</td>
+                  <td>10</td>
                 </tr>
                 <tr>
-                  <td>酒吧</td>
+                  <td>Calypso地中海</td>
+                  <td>7.8</td>
+                  <td>8.1</td>
+                  <td>5.6</td>
                   <td>8.6</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
+                  <td>8.1</td>
+                  <td>5.6</td>
+                  <td>7.3</td>
                 </tr>
                 <tr>
-                  <td>自助餐厅</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
+                  <td>1515牛排馆</td>
+                  <td>7.9</td>
+                  <td>7.7</td>
+                  <td>6.3</td>
+                  <td>8.3</td>
+                  <td>6.0</td>
+                  <td>4.0</td>
+                  <td>5.0</td>
                 </tr>
                 <tr>
-                  <td>咖啡厅</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
-                  <td>8.6</td>
+                  <td>夏宫</td>
+                  <td>7.6</td>
+                  <td>7.4</td>
+                  <td>5.7</td>
+                  <td>8.2</td>
+                  <td>6.6</td>
+                  <td>8.1</td>
+                  <td>8.8</td>
+                </tr>
                 </tr>
               </tbody>
             </table>
@@ -184,7 +191,7 @@ module.exports = {
       // },
       xAxis: {
         type: 'category',
-        data: ['咖啡厅', '中餐厅', '西餐厅', '酒吧', '自助餐厅']
+        data: ['鹤日本料理', '两咖啡', 'Calypso地中海', '1515牛排馆', '夏宫']
       },
       yAxis: {
         axisLabel: {
@@ -195,7 +202,7 @@ module.exports = {
         barMaxWidth: '70',
         name: '好评率',
         type: 'bar',
-        data: ['99', '97', '80', '75', '30']
+        data: ['82.35', '81.33', '80.03', '78.28', '76.25']
       }]
     }
     cpqChart.setOption(cpqOption)
@@ -209,17 +216,18 @@ module.exports = {
       },
       tooltip: {},
       legend: {
-        data: ['咖啡厅', '中餐厅', '西餐厅', '酒吧', '自助餐厅']
+        data: ['鹤日本料理', '两咖啡', 'Calypso地中海', '1515牛排馆', '夏宫']
       },
       radar: {
         // shape: 'circle',
         indicator: [
-         {name: '销售', max: 100},
-         {name: '管理', max: 100},
-         {name: '信息', max: 100},
-         {name: '客服', max: 100},
-         {name: '研发', max: 100},
-         {name: '市场', max: 100}
+         {name: '餐饮', max: 10},
+         {name: '服务', max: 10},
+         {name: '价格', max: 10},
+         {name: '酒店', max: 10},
+         {name: '设施', max: 10},
+         {name: '卫生', max: 10},
+         {name: '位置', max: 10}
         ]
       },
       series: [{
@@ -227,24 +235,24 @@ module.exports = {
         type: 'radar',
         data: [
           {
-            value: [60, 40, 95, 15, 97, 100],
-            name: '咖啡厅'
+            value: [9.2, 8.0, 3.3, 9.2, 7.8, 10, 10],
+            name: '鹤日本料理'
           },
           {
-            value: [45, 87, 58, 86, 34, 94],
-            name: '中餐厅'
+            value: [7.8, 7.8, 8.3, 8.6, 8.9, 10, 10],
+            name: '两咖啡'
           },
           {
-            value: [14, 57, 23, 98, 34, 23],
-            name: '西餐厅'
+            value: [7.8, 8.1, 5.6, 8.6, 8.1, 5.6, 7.3],
+            name: 'Calypso地中海'
           },
           {
-            value: [72, 12, 79, 22, 49, 59],
-            name: '酒吧'
+            value: [7.9, 7.7, 6.3, 8.3, 6.0, 4.0, 5.0],
+            name: '1515牛排馆'
           },
           {
-            value: [55, 42, 69, 87, 17, 5],
-            name: '自助餐厅'
+            value: [7.6, 7.4, 5.7, 8.2, 6.6, 8.1, 8.8],
+            name: '夏宫'
           }
         ]
       }]
@@ -262,7 +270,7 @@ module.exports = {
         trigger: 'axis'
       },
       legend: {
-        data: ['咖啡厅', '中餐厅', '西餐厅', '酒吧', '自助餐厅']
+        data: ['鹤日本料理', '两咖啡', 'Calypso地中海', '1515牛排馆', '夏宫']
       },
       xAxis: [
         {
@@ -279,29 +287,29 @@ module.exports = {
       ],
       series: [
         {
-          name: '咖啡厅',
+          name: '鹤日本料理',
           type: 'line',
-          data: [69, 55, 98, 81, 57, 56, 62]
+          data: [81, 72, 98, 81, 75, 67, 64]
         },
         {
-          name: '中餐厅',
+          name: '两咖啡',
           type: 'line',
-          data: [99, 99, 79, 55, 54, 89, 59]
+          data: [82, 69, 79, 87, 89, 95, 96]
         },
         {
-          name: '西餐厅',
+          name: 'Calypso地中海',
           type: 'line',
-          data: [93, 54, 70, 57, 82, 52, 55]
+          data: [77, 78, 72, 80, 76, 79, 79]
         },
         {
-          name: '酒吧',
+          name: '1515牛排馆',
           type: 'line',
-          data: [78, 74, 91, 87, 74, 62, 79]
+          data: [60, 64, 70, 72, 59, 61, 62]
         },
         {
-          name: '自助餐厅',
+          name: '夏宫',
           type: 'line',
-          data: [66, 82, 60, 56, 86, 56, 87]
+          data: [66, 72, 60, 56, 66, 56, 80]
         }
       ]
     }
@@ -317,13 +325,13 @@ module.exports = {
       },
       yAxis: {
         type: 'category',
-        data: ['卫生', '服务', '酒店', '整体', '位置', '质量', '口味']
+        data: ['态度', '品质', '价格', '种类', '味道']
       },
       xAxis: {},
       series: [{
         name: '好评率',
         type: 'bar',
-        data: ['3', '14', '30', '75', '80', '90', '99']
+        data: ['8', '25', '30', '75', '80']
       }]
     }
     dpAllChart.setOption(dpAllOption)
@@ -338,13 +346,13 @@ module.exports = {
       },
       yAxis: {
         type: 'category',
-        data: ['卫生', '服务', '酒店', '整体', '位置', '质量', '口味']
+        data: ['态度', '品质', '价格', '种类', '味道']
       },
       xAxis: {},
       series: [{
         name: '好评率',
         type: 'bar',
-        data: ['1', '4', '20', '35', '60', '60', '89']
+        data: ['7', '20', '25', '60', '70']
       }]
     }
     dpUpChart.setOption(dpUpOption)
@@ -359,13 +367,13 @@ module.exports = {
       },
       yAxis: {
         type: 'category',
-        data: ['卫生', '服务', '酒店', '整体', '位置', '质量', '口味']
+        data: ['装饰', '品质', '服务', '种类', '价格']
       },
       xAxis: {},
       series: [{
         name: '好评率',
         type: 'bar',
-        data: ['3', '14', '30', '45', '50', '60', '79']
+        data: ['3', '14', '30', '45', '50']
       }]
     }
     dpDownChart.setOption(dpDownOption)

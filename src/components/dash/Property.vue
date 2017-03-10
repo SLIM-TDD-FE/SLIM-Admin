@@ -60,7 +60,7 @@ module.exports = {
     }
   },
   mounted: function () {
-    // 年龄占比分配
+    // 年龄分布
     var ageGCChart = Echarts.init(document.getElementById('ageGC'))
     var ageGCOption = {
       tooltip: {
@@ -69,7 +69,7 @@ module.exports = {
       },
       series: [
         {
-          name: 'GC年龄占比分配',
+          name: '年龄分布',
           type: 'pie',
           selectedMode: 'single',
           radius: [0, '40%'],
@@ -84,14 +84,14 @@ module.exports = {
             }
           },
           data: [
-            {value: 679, name: '0-18'},
-            {value: 679, name: '18-25'},
-            {value: 679, name: '25-35'},
-            {value: 679, name: '35-45'},
-            {value: 679, name: '45-80'}
+            {value: 3, name: '0-19'},
+            {value: 10, name: '19-29'},
+            {value: 35, name: '30-39'},
+            {value: 45, name: '40-59'},
+            {value: 7, name: '>60'}
           ]
         }, {
-          name: 'GC占比分配',
+          name: 'GC占比',
           type: 'pie',
           selectedMode: 'single',
           radius: ['40%', '50%'],
@@ -110,16 +110,16 @@ module.exports = {
             }
           },
           data: [
-            {value: 335, name: 'GC', all: 679},
-            {value: 344, name: '非GC', all: 679},
-            {value: 335, name: 'GC', all: 679},
-            {value: 344, name: '非GC', all: 679},
-            {value: 335, name: 'GC', all: 679},
-            {value: 344, name: '非GC', all: 679},
-            {value: 335, name: 'GC', all: 679},
-            {value: 344, name: '非GC', all: 679},
-            {value: 335, name: 'GC', all: 679},
-            {value: 344, name: '非GC', all: 679}
+            {value: 60, name: 'GC', all: 679},
+            {value: 40, name: '非GC', all: 679},
+            {value: 20, name: 'GC', all: 679},
+            {value: 80, name: '非GC', all: 679},
+            {value: 25, name: 'GC', all: 679},
+            {value: 75, name: '非GC', all: 679},
+            {value: 30, name: 'GC', all: 679},
+            {value: 70, name: '非GC', all: 679},
+            {value: 60, name: 'GC', all: 679},
+            {value: 40, name: '非GC', all: 679}
           ]
         }
       ]
@@ -130,7 +130,7 @@ module.exports = {
     var faleGCChart = Echarts.init(document.getElementById('faleGC'))
     var faleGCOption = {
       title: {
-        text: '性别GC占比分配',
+        text: '性别分布',
         left: 'center',
         top: 'top'
       },
@@ -151,12 +151,12 @@ module.exports = {
         barWidth: 20,
         name: '男',
         type: 'bar',
-        data: [5, 20, 25]
+        data: [15, 45, 65]
       }, {
         barWidth: 20,
         name: '女',
         type: 'bar',
-        data: [7, 34, 41]
+        data: [5, 30, 35]
       }]
     }
     faleGCChart.setOption(faleGCOption)
@@ -165,7 +165,7 @@ module.exports = {
     var purGCChart = Echarts.init(document.getElementById('purGC'))
     var purGCOption = {
       title: {
-        text: '商旅休闲GC占比分配',
+        text: '商旅/休闲分布',
         left: 'center',
         top: 'top'
       },
@@ -186,12 +186,12 @@ module.exports = {
         barWidth: 20,
         name: '商旅',
         type: 'bar',
-        data: [5, 20, 25]
+        data: [40, 30, 70]
       }, {
         barWidth: 20,
         name: '休闲',
         type: 'bar',
-        data: [7, 34, 41]
+        data: [5, 25, 30]
       }]
     }
     purGCChart.setOption(purGCOption)
@@ -200,7 +200,7 @@ module.exports = {
     var subzChart = Echarts.init(document.getElementById('subz'))
     var subzOption = {
       title: {
-        text: '职业占比排名',
+        text: '职业分布',
         left: 'center',
         top: 'top'
       },
@@ -213,7 +213,7 @@ module.exports = {
       // },
       xAxis: {
         type: 'category',
-        data: ['IT互联网', '政府', '电子', '服务业', '旅游业']
+        data: ['IT', '政府', '教育', '餐饮', '媒体', '房地产', '金融', '保险', '医疗', '电信']
       },
       yAxis: {
         axisLabel: {
@@ -222,7 +222,7 @@ module.exports = {
       },
       series: [{
         barMaxWidth: '70',
-        name: '人数',
+        name: 'GC',
         stack: 'aaa',
         label: {
           normal: {
@@ -232,10 +232,10 @@ module.exports = {
           }
         },
         type: 'bar',
-        data: ['15', '13', '11', '7.5', '3']
+        data: ['30', '34', '29', '15', '20', '21', '9', '8', '12', '2']
       }, {
         barMaxWidth: '70',
-        name: '人数1',
+        name: 'Non GC',
         stack: 'aaa',
         label: {
           normal: {
@@ -245,7 +245,7 @@ module.exports = {
           }
         },
         type: 'bar',
-        data: ['15', '13', '11', '7.5', '3']
+        data: ['52', '23', '12', '23', '10', '6', '15', '13', '8', '10']
       }]
     }
     subzChart.setOption(subzOption)
@@ -254,7 +254,7 @@ module.exports = {
     var inzChart = Echarts.init(document.getElementById('inz'))
     var inzOption = {
       title: {
-        text: '兴趣占比排名',
+        text: '兴趣分布',
         left: 'center',
         top: 'top'
       },
@@ -267,7 +267,7 @@ module.exports = {
       // },
       xAxis: {
         type: 'category',
-        data: ['旅游', '摄影', '电子游戏', '音乐', '运动']
+        data: ['旅游', '摄影', '游戏', '音乐', '运动', '饮食', '书籍', '视频', '品茶', '棋牌']
       },
       yAxis: {
         axisLabel: {
@@ -276,7 +276,8 @@ module.exports = {
       },
       series: [{
         barMaxWidth: '70',
-        name: '人数',
+        name: 'GC',
+        stack: 'aaa',
         label: {
           normal: {
             show: true,
@@ -285,7 +286,20 @@ module.exports = {
           }
         },
         type: 'bar',
-        data: ['15', '13', '11', '7.5', '3']
+        data: ['50', '80', '20', '25', '70', '21', '29', '18', '22', '2']
+      }, {
+        barMaxWidth: '70',
+        name: 'Non GC',
+        stack: 'aaa',
+        label: {
+          normal: {
+            show: true,
+            position: 'inside',
+            formatter: '{c}%'
+          }
+        },
+        type: 'bar',
+        data: ['100', '60', '100', '89', '25', '56', '15', '13', '8', '10']
       }]
     }
     inzChart.setOption(inzOption)
@@ -294,7 +308,7 @@ module.exports = {
     var couzChart = Echarts.init(document.getElementById('couz'))
     var couzOption = {
       title: {
-        text: '国家占比排名TOP10',
+        text: 'TOP10国家分布',
         left: 'center',
         top: 'top'
       },
@@ -307,7 +321,7 @@ module.exports = {
       // },
       xAxis: {
         type: 'category',
-        data: ['中国', '美国', '日本', '韩国', '朝鲜', '西班牙', '法国', '德国', '荷兰', '巴西']
+        data: ['中国', '美国', '日本', '德国', '法国', '英国', '西班牙', '韩国', '马来西亚', '新加坡']
       },
       yAxis: {
         axisLabel: {
@@ -316,16 +330,30 @@ module.exports = {
       },
       series: [{
         barMaxWidth: '70',
-        name: '人数',
+        name: 'GC',
+        stack: 'aaa',
         label: {
           normal: {
             show: true,
-            position: 'top',
+            position: 'inside',
             formatter: '{c}%'
           }
         },
         type: 'bar',
-        data: ['45', '20', '17', '16', '15', '13', '11', '7.5', '3', '1.5']
+        data: ['70', '44', '59', '45', '40', '31', '9', '8', '12', '2']
+      }, {
+        barMaxWidth: '70',
+        name: 'Non GC',
+        stack: 'aaa',
+        label: {
+          normal: {
+            show: true,
+            position: 'inside',
+            formatter: '{c}%'
+          }
+        },
+        type: 'bar',
+        data: ['52', '53', '22', '23', '10', '6', '25', '18', '8', '11']
       }]
     }
     couzChart.setOption(couzOption)

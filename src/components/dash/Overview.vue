@@ -4,7 +4,7 @@
       <div class="col-xs-12">
         <div class="box">
           <div class="box-header">
-            <h3>11111</h3>
+            <h3>Revenue</h3>
             <div class="btn-group" role="group">
               <button type="button" class="btn btn-default">Yesterday</button>
               <button type="button" class="btn btn-default">MTD</button>
@@ -28,7 +28,7 @@
       <div class="col-xs-12">
         <div class="box">
           <div class="box-header">
-            <h3>11111</h3>
+            <h3>Rooms</h3>
             <div class="btn-group" role="group">
               <button type="button" class="btn btn-default">Yesterday</button>
               <button type="button" class="btn btn-default">MTD</button>
@@ -88,11 +88,10 @@ module.exports = {
             }
           },
           data: [
-            {value: 6, name: '啦啦1'},
-            {value: 9, name: '啦啦2'},
-            {value: 679, name: '啦啦3'},
-            {value: 679, name: '啦啦4'},
-            {value: 679, name: '啦啦5'}
+            {value: 103268, name: 'Rooms'},
+            {value: 53268, name: 'Events'},
+            {value: 143829, name: 'F&B'},
+            {value: 34970, name: 'OOD'}
           ]
         }
       ]
@@ -109,7 +108,7 @@ module.exports = {
       },
       legend: {
         show: false,
-        data: ['利润', '支出', '收入']
+        data: ['Cost', 'Revenue', 'Profit']
       },
       xAxis: [
         {
@@ -120,12 +119,12 @@ module.exports = {
         {
           type: 'category',
           axisTick: {show: false},
-          data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+          data: ['OOD', 'Events', 'Rooms', 'F&B', 'All']
         }
       ],
       series: [
         {
-          name: '利润',
+          name: 'Profit',
           type: 'bar',
           label: {
             normal: {
@@ -133,10 +132,10 @@ module.exports = {
               position: 'inside'
             }
           },
-          data: [200, 170, 240, 244, 200, 220, 210]
+          data: [20982, 37287, 74335, 59284, 191888]
         },
         {
-          name: '收入',
+          name: 'Revenue',
           type: 'bar',
           stack: '总量',
           label: {
@@ -144,10 +143,10 @@ module.exports = {
               show: true
             }
           },
-          data: [320, 302, 341, 374, 390, 450, 420]
+          data: [34970, 53268, 103268, 143829, 335335]
         },
         {
-          name: '支出',
+          name: 'Cost',
           type: 'bar',
           stack: '总量',
           label: {
@@ -156,7 +155,7 @@ module.exports = {
               position: 'left'
             }
           },
-          data: [-120, -132, -101, -134, -190, -230, -210]
+          data: [-13988, -15981, -28933, -84545, -143447]
         }
       ]
     }
@@ -166,40 +165,40 @@ module.exports = {
     var zh1Chart = Echarts.init(document.getElementById('zh1'), 'walden')
     var zh1Option = {
       xAxis: [{
-        data: ['2010', '2011', '2012', '2013']
+        data: ['2017.1', '2017.2', '2017.3', '2017.4', '2017.5', '2017.6']
       }],
       yAxis: [{
-        name: 'Room',
+        name: 'Occupancy%',
         type: 'value'
       }, {
-        name: 'RevPPAR',
+        name: 'RevPAR',
         type: 'value'
       }],
       series: [
         {
           type: 'line',
           yAxisIndex: '0',
-          data: [1, 3, 5, 6, 7]
+          data: [60.1, 49.9, 41.4, 6.3, 6.8, 3.3]// TODO OTB OCC CLOUR 1 实线
         }, {
           type: 'line',
           yAxisIndex: '0',
-          data: [11, 32, 35, 46, 57]
+          data: [58.9, 52.6, 39.8, 13.7, 29.3, 0.8]// TODO LY OCC 1 浅色系
         }, {
           type: 'line',
           yAxisIndex: '0',
-          data: [1, 32, 55, 16, 17]
+          data: [64.4, 51.9, 71.6, 73.4, 74.3, 71]// TODO FORECAST OCC 1 虚线
         }, {
           type: 'line',
           yAxisIndex: '1',
-          data: [21, 3, 5, 76, 7]
+          data: [849, 734, 650, 69, 61, 24, 6]// TODO OTB REVPAR CLOUR 2 实线
         }, {
           type: 'line',
           yAxisIndex: '1',
-          data: [1, 33, 45, 6, 7]
+          data: [887, 629, 617, 171, 437, 7, 13]// TODO LY REVPAR 2 浅色系
         }, {
           type: 'line',
           yAxisIndex: '1',
-          data: [1, 23, 55, 63, 7]
+          data: [926, 752, 1185, 1123, 1249, 1125, 1116]// TODO FORECAST REVPAR 2 虚线
         }
       ]
     }
@@ -208,40 +207,32 @@ module.exports = {
     var zh2Chart = Echarts.init(document.getElementById('zh2'), 'walden')
     var zh2Option = {
       xAxis: [{
-        data: ['2010', '2011', '2012', '2013']
+        data: ['2017.1', '2017.2', '2017.3', '2017.4', '2017.5', '2017.6']
       }],
       yAxis: [{
-        name: 'Room',
+        name: 'Occupancy%',
         type: 'value'
       }, {
-        name: 'RevPPAR',
+        name: 'RevPAS',
         type: 'value'
       }],
       series: [
         {
           type: 'line',
           yAxisIndex: '0',
-          data: [1, 3, 5, 6, 7]
+          data: [47.1, 14.2, 28.5, 8.8, 4.4, 6]// TODO OTB OCC CLOUR 1 实线
         }, {
           type: 'line',
           yAxisIndex: '0',
-          data: [11, 32, 35, 46, 57]
+          data: [56.9, 29, 32.3, 25.8, 47.1, 33.8]// TODO LY OCC CLOUR 1 浅色
         }, {
           type: 'line',
           yAxisIndex: '0',
-          data: [1, 32, 55, 16, 17]
+          data: [21.5, 2.7, 11, 2.3, 0.9, 1.7]// TODO OTB PAS CLOUR 2 实线
         }, {
           type: 'line',
           yAxisIndex: '1',
-          data: [21, 3, 5, 76, 7]
-        }, {
-          type: 'line',
-          yAxisIndex: '1',
-          data: [1, 33, 45, 6, 7]
-        }, {
-          type: 'line',
-          yAxisIndex: '1',
-          data: [1, 23, 55, 63, 7]
+          data: [22.2, 5.6, 11.5, 7.9, 13.6, 12.5]// TODO LY PAS CLOUR 2 浅色
         }
       ]
     }
