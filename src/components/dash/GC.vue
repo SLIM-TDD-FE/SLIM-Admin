@@ -69,7 +69,7 @@ module.exports = {
   },
   mounted: function () {
     // GC占比分配
-    var myChart1 = Echarts.init(document.getElementById('bing01'), 'infographic')
+    var myChart1 = Echarts.init(document.getElementById('bing01'), 'walden')
     var option1 = {
       tooltip: {
         trigger: 'item',
@@ -109,7 +109,7 @@ module.exports = {
     myChart1.setOption(option1)
 
     // 堆叠柱形图
-    var ddzChart = Echarts.init(document.getElementById('ddz'), 'infographic')
+    var ddzChart = Echarts.init(document.getElementById('ddz'), 'walden')
     var ddzOption = {
       title: {
         text: 'GC来源分布',
@@ -142,7 +142,7 @@ module.exports = {
     ddzChart.setOption(ddzOption)
 
     // 堆叠柱形图
-    var xfzChart = Echarts.init(document.getElementById('xfz'), 'infographic')
+    var xfzChart = Echarts.init(document.getElementById('xfz'), 'walden')
     var xfzOption = {
       title: {
         text: 'GC消费分配',

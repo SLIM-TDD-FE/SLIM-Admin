@@ -59,7 +59,7 @@
     },
     mounted: function () {
       // 折线混合
-      var dzzxChart = Echarts.init(document.getElementById('dzzx'))
+      var dzzxChart = Echarts.init(document.getElementById('dzzx'), 'walden')
       var dzzxOption = {
         xAxis: [{
           data: ['2010', '2011', '2012', '2013']

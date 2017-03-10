@@ -15,6 +15,11 @@
             <div class="row">
               <div class="col-xs-4">
                 <div id="pie1" style="height:400px"></div>
+                <div class="btn-group left50" role="group">
+                  <button type="button" class="btn btn-default">Yesterday</button>
+                  <button type="button" class="btn btn-default">MTD</button>
+                  <button type="button" class="btn btn-default">YTD</button>
+                </div>
               </div>
               <div class="col-xs-8">
                 <div id="bar1" style="height:400px"></div>
@@ -112,13 +117,13 @@ module.exports = {
       },
       series: [
         {
-          name: 'Revenue分配',
+          name: 'Revenue',
           type: 'pie',
           selectedMode: 'single',
-          radius: ['40%', '80%'],
+          radius: ['40%', '90%'],
           label: {
             normal: {
-              position: 'outside'
+              position: 'inner'
             }
           },
           labelLine: {
@@ -374,5 +379,8 @@ module.exports = {
   }
   .totalTable{
     margin-top: 25px;
+  }
+  .left50{
+    left: 70px;
   }
 </style>
