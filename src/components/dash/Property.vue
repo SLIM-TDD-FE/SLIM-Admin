@@ -205,12 +205,12 @@ module.exports = {
         top: 'top'
       },
       tooltip: {
-        formatter: '{b}{a}\n{c}%'
+        // formatter: '{b}{a}\n{c}%'
       },
-      // legend: {
-      //   data: ['人数'],
-      //   top: '30'
-      // },
+      legend: {
+        data: ['GC', 'Non GC'],
+        top: '30'
+      },
       xAxis: {
         type: 'category',
         data: ['IT', '政府', '教育', '餐饮', '媒体', '房地产', '金融', '保险', '医疗', '电信']
@@ -261,10 +261,10 @@ module.exports = {
       tooltip: {
         formatter: '{b}{a}\n{c}%'
       },
-      // legend: {
-      //   data: ['人数'],
-      //   top: '30'
-      // },
+      legend: {
+        data: ['GC', 'Non GC'],
+        top: '30'
+      },
       xAxis: {
         type: 'category',
         data: ['旅游', '摄影', '游戏', '音乐', '运动', '饮食', '书籍', '视频', '品茶', '棋牌']
@@ -315,10 +315,10 @@ module.exports = {
       tooltip: {
         formatter: '{b}{a}\n{c}%'
       },
-      // legend: {
-      //   data: ['人数'],
-      //   top: '30'
-      // },
+      legend: {
+        data: ['GC', 'Non GC'],
+        top: '30'
+      },
       xAxis: {
         type: 'category',
         data: ['中国', '美国', '日本', '德国', '法国', '英国', '西班牙', '韩国', '马来西亚', '新加坡']

@@ -38,9 +38,6 @@
     <div class="row">
       <div id="xfz" style="height:400px;"></div>
     </div>
-    <div class="row">
-      <div id="plz" style="height:400px;"></div>
-    </div>
   </section>
 </template>
 <script>
@@ -174,35 +171,6 @@ module.exports = {
       }]
     }
     xfzChart.setOption(xfzOption)
-
-    // 堆叠柱形图
-    var plzChart = Echarts.init(document.getElementById('plz'), 'infographic')
-    var plzOption = {
-      title: {
-        text: '入住频率统计',
-        left: 'center',
-        top: 'top'
-      },
-      tooltip: {
-        formatter: '{c}'
-      },
-      // legend: {
-      //   data: ['人数'],
-      //   top: '30'
-      // },
-      xAxis: {
-        type: 'category',
-        data: ['1天', '2天', '3天', '4天', '5天', '5天以上']
-      },
-      yAxis: {},
-      series: [{
-        barMaxWidth: '70',
-        name: 'GC',
-        type: 'bar',
-        data: [5, 20, 25, 34, 12, 4]
-      }]
-    }
-    plzChart.setOption(plzOption)
   }
 }
 </script>
@@ -213,8 +181,6 @@ module.exports = {
 .GCCount{
   padding-left: 20px;
   margin-top: 40px;
-}
-.GCCount:not(:nth-child(3n+1)){
   border-left: 1px #000 solid;
 }
 .BoldFont{
