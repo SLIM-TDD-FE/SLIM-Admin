@@ -16,90 +16,125 @@
               <tbody>
                 <tr>
                     <th rowspan="2">Hotels</th>
+                    <th rowspan="2"></th>
                     <th>Total</th>
-                    <th colspan="2">Rooms</th>
-                    <th colspan="2">Events</th>
-                    <th colspan="2">F&B</th>
-                    <th colspan="2">OOD</th>
+                    <th colspan="4">Rooms</th>
+                    <th colspan="3">Events</th>
+                    <th colspan="4">F&B</th>
+                    <th colspan="1">OOD</th>
                 </tr>
                 <tr>
                     <th>Revenue</th>
-                    <th>1</th>
-                    <th>2</th>
-                    <th>3</th>
-                    <th>2</th>
-                    <th>1</th>
-                    <th>2</th>
-                    <th>1</th>
-                    <th>2</th>
+                    <th>Occupancy</th>
+                    <th>ADR</th>
+                    <th>RevPar</th>
+                    <th>Revenue</th>
+                    <th>Covers</th>
+                    <th>RevPAS</th>
+                    <th>Revenue</th>
+                    <th>Covers</th>
+                    <th>AvgCheque/Cover</th>
+                    <th>RevPASH</th>
+                    <th>Revenue</th>
+                    <th>OOD Revenue</th>
                 </tr>
                 <tr>
-                    <td rowspan="3">Shangri-la Hotel</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
+                    <td rowspan="3">CWSW Hotel</td>
+                    <td>MTD</td>
+                    <td>4727294</td>
+                    <td>71.65%</td>
+                    <td>1689</td>
+                    <td>1218</td>
+                    <td>3048152</td>
+                    <td>1409</td>
+                    <td>4.2</td>
+                    <td>191096</td>
+                    <td>2414</td>
+                    <td>370</td>
+                    <td>83</td>
+                    <td>892412</td>
+                    <td>595634</td>
                 </tr>
                 <tr>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
+                    <td>LY</td>
+                    <td>4002083</td>
+                    <td>58.8%</td>
+                    <td>1771</td>
+                    <td>1042</td>
+                    <td>2606219</td>
+                    <td>1486</td>
+                    <td>3.0</td>
+                    <td>139204</td>
+                    <td>2028</td>
+                    <td>423</td>
+                    <td>80</td>
+                    <td>857896</td>
+                    <td>398764</td>
                 </tr>
                 <tr>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
+                    <td>Forecast</td>
+                    <td>4180231</td>
+                    <td>62.8%</td>
+                    <td>1649</td>
+                    <td>1036</td>
+                    <td>2591199</td>
+                    <td>1670</td>
+                    <td>5.5</td>
+                    <td>213453</td>
+                    <td>2820</td>
+                    <td>500</td>
+                    <td>90</td>
+                    <td>923106</td>
+                    <td>452473</td>
                 </tr>
                 <tr>
-                    <td rowspan="3">Shangri-la Hotel</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
+                    <td rowspan="3">Kerry Hotel</td>
+                    <td>MTD</td>
+                    <td>4727294</td>
+                    <td>71.65%</td>
+                    <td>1689</td>
+                    <td>1218</td>
+                    <td>3048152</td>
+                    <td>1409</td>
+                    <td>4.2</td>
+                    <td>191096</td>
+                    <td>2414</td>
+                    <td>370</td>
+                    <td>83</td>
+                    <td>892412</td>
+                    <td>595634</td>
                 </tr>
                 <tr>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
+                    <td>LY</td>
+                    <td>4002083</td>
+                    <td>58.8%</td>
+                    <td>1771</td>
+                    <td>1042</td>
+                    <td>2606219</td>
+                    <td>1486</td>
+                    <td>3.0</td>
+                    <td>139204</td>
+                    <td>2028</td>
+                    <td>423</td>
+                    <td>80</td>
+                    <td>857896</td>
+                    <td>398764</td>
                 </tr>
                 <tr>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
-                    <td>299</td>
+                    <td>Forecast</td>
+                    <td>4180231</td>
+                    <td>62.8%</td>
+                    <td>1649</td>
+                    <td>1036</td>
+                    <td>2591199</td>
+                    <td>1670</td>
+                    <td>5.5</td>
+                    <td>213453</td>
+                    <td>2820</td>
+                    <td>500</td>
+                    <td>90</td>
+                    <td>923106</td>
+                    <td>452473</td>
                 </tr>
               </tbody>
             </table>
