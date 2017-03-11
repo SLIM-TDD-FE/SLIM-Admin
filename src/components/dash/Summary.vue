@@ -21,22 +21,15 @@
                   <div class="btn-group" role="group" aria-label="...">
                     <div class="btn-group" role="group">
                       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        选择餐厅
+                        CFG Grill 79
                         <span class="caret"></span>
                       </button>
                       <ul class="dropdown-menu">
-                        <li><a href="#">一月</a></li>
-                        <li><a href="#">二月</a></li>
-                        <li><a href="#">三月</a></li>
-                        <li><a href="#">四月</a></li>
-                        <li><a href="#">五月</a></li>
-                        <li><a href="#">六月</a></li>
-                        <li><a href="#">七月</a></li>
-                        <li><a href="#">八月</a></li>
-                        <li><a href="#">九月</a></li>
-                        <li><a href="#">十月</a></li>
-                        <li><a href="#">十一月</a></li>
-                        <li><a href="#">十二月</a></li>
+                        <li><a href="#">CFG Grill 79</a></li>
+                        <li><a href="#">FB1 Atmosphere</a></li>
+                        <li><a href="#">FB2 Noodle Bar</a></li>
+                        <li><a href="#">FS2 The Red Chamber</a></li>
+                        <li><a href="#">JPN Nadaman</a></li>
                       </ul>
                     </div>
                   </div>
@@ -90,13 +83,13 @@
                 <th>Restaurant</th>
                 <th>Turnover/Seat Occ%</th>
                 <th>Revenue/hour</th>
-                <th>Revenue/SQM</th>
+                <th>RevPSQM</th>
                 <th>RevPASH</th>
                 <th>Revenue</th>
                 <th>Covers</th>
                 <th>Cheques</th>
-                <th>Avg Cheques</th>
-                <th>AvgCheques/Cover</th>
+                <th>Avg Cheque</th>
+                <th>Avg Cheque/Cover</th>
               </tr>
               <tr>
                 <td>CFG Grill 79</td>

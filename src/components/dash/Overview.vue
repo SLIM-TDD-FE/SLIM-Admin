@@ -16,9 +16,9 @@
               <div class="col-xs-4">
                 <div id="pie1" style="height:400px"></div>
                 <div class="btn-group left50" role="group">
-                  <button type="button" class="btn btn-default">Yesterday</button>
-                  <button type="button" class="btn btn-default">MTD</button>
-                  <button type="button" class="btn btn-default">YTD</button>
+                  <button type="button" class="btn btn-default">Revenue</button>
+                  <button type="button" class="btn btn-default">Cost</button>
+                  <button type="button" class="btn btn-default">Profit</button>
                 </div>
               </div>
               <div class="col-xs-8">
@@ -222,54 +222,54 @@ module.exports = {
         type: 'value'
       }],
       legend: {
-        data: ['OTB OCC', 'LY OCC', 'FORECAST OCC', 'OTB REVOAR', 'LV REVPAR', 'FORECAST REVPAR']
+        data: ['Occupancy', 'LY OTB Occupancy', 'Fcst Occupancy', 'RevPAR', 'LY OTB RevPAR', 'Fcst RevPAR']
       },
       series: [
         {
           type: 'line',
           yAxisIndex: '0',
-          name: 'OTB OCC',
+          name: 'Occupancy',
           data: [60.1, 49.9, 41.4, 6.3, 6.8, 3.3]// TODO OTB OCC CLOUR 1 实线
         }, {
           type: 'line',
           yAxisIndex: '0',
-          name: 'LY OCC',
+          name: 'LY OTB Occupancy',
           data: [58.9, 52.6, 39.8, 13.7, 29.3, 0.8]// TODO LY OCC 1 浅色系
         }, {
           type: 'line',
           yAxisIndex: '0',
-          name: 'FORECAST OCC',
+          name: 'Fcst Occupancy',
           data: [64.4, 51.9, 71.6, 73.4, 74.3, 71]// TODO FORECAST OCC 1 虚线
         }, {
           type: 'line',
           yAxisIndex: '1',
-          name: 'OTB REVOAR',
+          name: 'RevPAR',
           lineStyle: {
             normal: {
               type: 'dotted'
             }
           },
-          data: [849, 734, 650, 69, 61, 24, 6]// TODO OTB REVPAR CLOUR 2 实线
+          data: [849, 734, 650, 69, 61, 24]// TODO OTB REVPAR CLOUR 2 实线
         }, {
           type: 'line',
           yAxisIndex: '1',
-          name: 'LV REVPAR',
+          name: 'LY OTB RevPAR',
           lineStyle: {
             normal: {
               type: 'dotted'
             }
           },
-          data: [887, 629, 617, 171, 437, 7, 13]// TODO LY REVPAR 2 浅色系
+          data: [887, 629, 617, 171, 437, 7]// TODO LY REVPAR 2 浅色系
         }, {
           type: 'line',
           yAxisIndex: '1',
-          name: 'FORECAST REVPAR',
+          name: 'Fcst RevPAR',
           lineStyle: {
             normal: {
               type: 'dotted'
             }
           },
-          data: [926, 752, 1185, 1123, 1249, 1125, 1116]// TODO FORECAST REVPAR 2 虚线
+          data: [926, 752, 1185, 1123, 1249, 1125]// TODO FORECAST REVPAR 2 虚线
         }
       ]
     }
@@ -277,6 +277,7 @@ module.exports = {
 
     var zh2Chart = Echarts.init(document.getElementById('zh2'), 'walden')
     var zh2Option = {
+      tooltip: {},
       xAxis: [{
         data: ['2017.1', '2017.2', '2017.3', '2017.4', '2017.5', '2017.6']
       }],
@@ -288,23 +289,23 @@ module.exports = {
         type: 'value'
       }],
       legend: {
-        data: ['OTB OCC', 'LY OCC', 'OTB PAS', 'LY PAS']
+        data: ['Occupancy', 'LY Occupancy', 'RevPAS', 'LY RevPAS']
       },
       series: [
         {
           type: 'line',
           yAxisIndex: '0',
-          name: 'OTB OCC',
+          name: 'Occupancy',
           data: [47.1, 14.2, 28.5, 8.8, 4.4, 6]// TODO OTB OCC CLOUR 1 实线
         }, {
           type: 'line',
           yAxisIndex: '0',
-          name: 'LY OCC',
+          name: 'LY Occupancy',
           data: [56.9, 29, 32.3, 25.8, 47.1, 33.8]// TODO LY OCC CLOUR 1 浅色
         }, {
           type: 'line',
           yAxisIndex: '1',
-          name: 'OTB PAS',
+          name: 'RevPAS',
           lineStyle: {
             normal: {
               type: 'dotted'
@@ -314,7 +315,7 @@ module.exports = {
         }, {
           type: 'line',
           yAxisIndex: '1',
-          name: 'LY PAS',
+          name: 'LY RevPAS',
           lineStyle: {
             normal: {
               type: 'dotted'
