@@ -14,7 +14,7 @@
           <div class="box-header">
             <div class="container-fluid">
               <div class="navbar-header">
-                <a class="navbar-brand">餐厅: </a>
+                <a class="navbar-brand">Restaurant:</a>
               </div>
               <div class="collapse navbar-collapse">
                 <form class="navbar-form navbar-left">
@@ -36,22 +36,19 @@
                   <div class="btn-group" role="group" aria-label="...">
                     <div class="btn-group" role="group">
                       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        选择指标
+                        Avg cheque
                         <span class="caret"></span>
                       </button>
                       <ul class="dropdown-menu">
-                        <li><a href="#">一月</a></li>
-                        <li><a href="#">二月</a></li>
-                        <li><a href="#">三月</a></li>
-                        <li><a href="#">四月</a></li>
-                        <li><a href="#">五月</a></li>
-                        <li><a href="#">六月</a></li>
-                        <li><a href="#">七月</a></li>
-                        <li><a href="#">八月</a></li>
-                        <li><a href="#">九月</a></li>
-                        <li><a href="#">十月</a></li>
-                        <li><a href="#">十一月</a></li>
-                        <li><a href="#">十二月</a></li>
+                        <li><a href="#">Turnover/Seat Occ%</a></li>
+                        <li><a href="#">Revenue/hour</a></li>
+                        <li><a href="#">RevPSQM</a></li>
+                        <li><a href="#">RevPASH</a></li>
+                        <li><a href="#">Revenue</a></li>
+                        <li><a href="#">Covers</a></li>
+                        <li><a href="#">Cheques</a></li>
+                        <li><a href="#">Avg Cheque</a></li>
+                        <li><a href="#">Avg Cheque/Cover</a></li>
                       </ul>
                     </div>
                   </div>
@@ -217,6 +214,6 @@
 </script>
 <style>
   .rightFuck{
-    margin-left: 400px;
+    margin-left: 520px;
   }
 </style>

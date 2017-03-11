@@ -157,7 +157,6 @@ module.exports = {
       xAxis: [
         {
           type: 'value',
-          name: 'RMB'
         }
       ],
       yAxis: [

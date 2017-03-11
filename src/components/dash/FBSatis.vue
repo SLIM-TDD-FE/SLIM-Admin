@@ -4,36 +4,29 @@
       <nav class="navbar navbar-default">
         <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand">餐厅：</a>
+          <a class="navbar-brand">Restaurant:</a>
         </div>
         <div class="collapse navbar-collapse">
           <form class="navbar-form navbar-left">
             <div class="btn-group" role="group" aria-label="...">
               <div class="btn-group" role="group">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  选择餐厅
+                  CFG Grill 79
                   <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                  <li><a href="#">一月</a></li>
-                  <li><a href="#">二月</a></li>
-                  <li><a href="#">三月</a></li>
-                  <li><a href="#">四月</a></li>
-                  <li><a href="#">五月</a></li>
-                  <li><a href="#">六月</a></li>
-                  <li><a href="#">七月</a></li>
-                  <li><a href="#">八月</a></li>
-                  <li><a href="#">九月</a></li>
-                  <li><a href="#">十月</a></li>
-                  <li><a href="#">十一月</a></li>
-                  <li><a href="#">十二月</a></li>
+                  <li><a href="#">CFG Grill 79</a></li>
+                  <li><a href="#">FB1 Atmosphere</a></li>
+                  <li><a href="#">FB2 Noodle Bar</a></li>
+                  <li><a href="#">FS2 The Red Chamber</a></li>
+                  <li><a href="#">JPN Nadaman</a></li>
                 </ul>
               </div>
             </div>
           </form>
         </div>
         <div class="navbar-header">
-          <a class="navbar-brand">时间：</a>
+          <a class="navbar-brand">Date range:</a>
         </div>
         <div class="collapse navbar-collapse">
           <form class="navbar-form navbar-left">
@@ -236,7 +229,7 @@ module.exports = {
     var cpqChart = Echarts.init(document.getElementById('cpq'), 'walden')
     var cpqOption = {
       title: {
-        text: '酒店餐厅好评率排名',
+        text: '餐厅好评率排名',
         left: 'center',
         top: 'top'
       },
@@ -255,7 +248,7 @@ module.exports = {
         axisLabel: {
           formatter: '{value}%'
         },
-        min: 70
+        min: 75
       },
       series: [{
         barMaxWidth: '70',
@@ -338,12 +331,12 @@ module.exports = {
           data: ['一月', '二月', '三月', '四月', '五月', '六月', '七月']
         }
       ],
-      yAxis: [
-        {
-          type: 'value',
-          min: 30
-        }
-      ],
+      yAxis: {
+        axisLabel: {
+          formatter: '{value}%'
+        },
+        min: 40
+      },
       series: [
         {
           name: '鹤日本料理',

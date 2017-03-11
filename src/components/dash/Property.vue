@@ -3,7 +3,7 @@
   <nav class="navbar navbar-default">
     <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand">时间：</a>
+      <a class="navbar-brand">Date range:</a>
     </div>
     <div class="collapse navbar-collapse">
       <form class="navbar-form navbar-left">
@@ -165,7 +165,7 @@ module.exports = {
         barWidth: 20,
         name: '男',
         type: 'bar',
-        data: [15, 45, 65]
+        data: [15, 45, 60]
       }, {
         barWidth: 20,
         name: '女',
@@ -246,7 +246,7 @@ module.exports = {
           }
         },
         type: 'bar',
-        data: ['30', '34', '29', '15', '20', '21', '9', '8', '12', '2']
+        data: ['20', '10', '11.2', '6.3', '2.5', '2.1', '6.7', '1', '0.22', '1.1']
       }, {
         barMaxWidth: '70',
         name: 'Non GC',
@@ -259,7 +259,7 @@ module.exports = {
           }
         },
         type: 'bar',
-        data: ['52', '23', '12', '23', '10', '6', '15', '13', '8', '10']
+        data: ['10', '12', '9.9', '11.2', '12.3', '10', '1.2', '2.5', '2.1', '1.0']
       }]
     }
     subzChart.setOption(subzOption)
@@ -300,7 +300,7 @@ module.exports = {
           }
         },
         type: 'bar',
-        data: ['50', '80', '20', '25', '70', '21', '29', '18', '22', '2']
+        data: ['10', '12', '9.9', '11.2', '12.3', '10', '1.2', '2.5', '2.1', '1.0']
       }, {
         barMaxWidth: '70',
         name: 'Non GC',
@@ -313,7 +313,7 @@ module.exports = {
           }
         },
         type: 'bar',
-        data: ['100', '60', '100', '89', '25', '56', '15', '13', '8', '10']
+        data: ['20', '10', '11.2', '6.3', '2.5', '2.1', '6.7', '1', '0.22', '1.1']
       }]
     }
     inzChart.setOption(inzOption)
@@ -354,7 +354,7 @@ module.exports = {
           }
         },
         type: 'bar',
-        data: ['70', '44', '59', '45', '40', '31', '9', '8', '12', '2']
+        data: ['7', '4.4', '5.9', '4.5', '4.0', '3.1', '0.9', '0.8', '1.2', '0.2']
       }, {
         barMaxWidth: '70',
         name: 'Non GC',
@@ -367,7 +367,7 @@ module.exports = {
           }
         },
         type: 'bar',
-        data: ['52', '53', '22', '23', '10', '6', '25', '18', '8', '11']
+        data: ['5.2', '5.3', '2.2', '2.3', '1.0', '0.6', '2.5', '1.8', '0.8', '1.1']
       }]
     }
     couzChart.setOption(couzOption)

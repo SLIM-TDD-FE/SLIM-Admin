@@ -6,36 +6,29 @@
           <div class="box-header">
             <div class="container-fluid">
               <div class="navbar-header">
-                <a class="navbar-brand">餐厅：</a>
+                <a class="navbar-brand">Restaurant:</a>
               </div>
               <div class="collapse navbar-collapse">
                 <form class="navbar-form navbar-left">
                   <div class="btn-group" role="group" aria-label="...">
                     <div class="btn-group" role="group">
                       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        选择餐厅
+                        CFG Grill 79
                         <span class="caret"></span>
                       </button>
                       <ul class="dropdown-menu">
-                        <li><a href="#">一月</a></li>
-                        <li><a href="#">二月</a></li>
-                        <li><a href="#">三月</a></li>
-                        <li><a href="#">四月</a></li>
-                        <li><a href="#">五月</a></li>
-                        <li><a href="#">六月</a></li>
-                        <li><a href="#">七月</a></li>
-                        <li><a href="#">八月</a></li>
-                        <li><a href="#">九月</a></li>
-                        <li><a href="#">十月</a></li>
-                        <li><a href="#">十一月</a></li>
-                        <li><a href="#">十二月</a></li>
+                        <li><a href="#">CFG Grill 79</a></li>
+                        <li><a href="#">FB1 Atmosphere</a></li>
+                        <li><a href="#">FB2 Noodle Bar</a></li>
+                        <li><a href="#">FS2 The Red Chamber</a></li>
+                        <li><a href="#">JPN Nadaman</a></li>
                       </ul>
                     </div>
                   </div>
                 </form>
               </div>
               <div class="navbar-header">
-                <a class="navbar-brand">时间：</a>
+                <a class="navbar-brand">Date range:</a>
               </div>
               <div class="collapse navbar-collapse">
                 <form class="navbar-form navbar-left">
@@ -49,8 +42,8 @@
             </div>
           </div>
           <ul class="nav nav-tabs">
-            <li role="presentation" :class="page == 0 ? 'active' : ''" @click="goPage(0)"><a href=" ">Beverage</a ></li>
-            <li role="presentation" :class="page == 1 ? 'active' : ''" @click="goPage(1)"><a href="#">Food</a ></li>
+          <li role="presentation" :class="page == 0 ? 'active' : ''" @click="goPage(0)"><a href=" ">Beverage</a ></li>
+          <li role="presentation" :class="page == 1 ? 'active' : ''" @click="goPage(1)"><a href="#">Food</a ></li>
           </ul>
           <div class="box-body" v-show="page == 0">
             <div class="row">
@@ -185,6 +178,9 @@ module.exports = {
     // Revenue占比
     var pie1Chart = Echarts.init(document.getElementById('pie1'), 'walden')
     var pie1Option = {
+      legend: {
+        data: ['alcohol Revenue', 'non-alcohol Revenue']
+      },
       tooltip: {
         trigger: 'item',
         formatter: '{a} <br/>{b}: {c} {d}%'
@@ -194,13 +190,13 @@ module.exports = {
       },
       series: [
         {
-          name: 'Revenue分配',
+          name: 'Revenue',
           type: 'pie',
           selectedMode: 'single',
           radius: ['40%', '80%'],
           label: {
             normal: {
-              position: 'outside'
+              position: 'inner'
             }
           },
           labelLine: {
@@ -209,8 +205,8 @@ module.exports = {
             }
           },
           data: [
-            {value: 447677, name: 'alcohol'},
-            {value: 99392, name: 'non-alcohol'}
+            {value: 447677, name: 'alcohol Revenue'},
+            {value: 99392, name: 'non-alcohol Revenue'}
           ]
         }
       ]
@@ -226,29 +222,30 @@ module.exports = {
         }
       },
       legend: {
-        show: false,
-        data: ['alcohol', 'non-alcohol']
+        data: ['alcohol Sales', 'non-alcohol Sales']
       },
       xAxis: [
         {
-          type: 'value'
+          type: 'value',
+          name: 'Price'
         }
       ],
       yAxis: [
         {
-          type: 'value'
+          type: 'value',
+          name: 'Cost'
         }
       ],
       series: [
         {
-          name: 'alcohol',
+          name: 'alcohol Sales',
           type: 'scatter',
           symbolSize: function (data) {
             return (data[2] / 10)
           },
           data: [[23, 3, 180], [33, 5, 140], [40, 10, 90], [44, 15, 290], [50, 30, 100], [60, 12, 70], [88, 55, 60], [130, 35, 34]]
         }, {
-          name: 'non-alcohol',
+          name: 'non-alcohol Sales',
           type: 'scatter',
           symbolSize: function (data) {
             return (data[2] / 10)

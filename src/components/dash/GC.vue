@@ -13,7 +13,7 @@
           </div>
           <div class="col-xs-4 GCCount">
             <p>GC arrivals <i v-bind:title="textAll[1]" class="fa fa-question-circle"></i></p>
-            <p class="BoldFont">500</p>
+            <p class="BoldFont">800</p>
           </div>
           <div class="col-xs-4 GCCount">
             <p>New GC arrivals <i v-bind:title="textAll[2]" class="fa fa-question-circle"></i></p>
@@ -80,7 +80,7 @@ module.exports = {
         formatter: '{a} {b}: {c} {d}%',
         orient: 'vertical',
         x: 'left',
-        data: ['GC', '非GC']
+        data: ['GC', 'Non GC']
       },
       series: [
         {
@@ -100,8 +100,8 @@ module.exports = {
             }
           },
           data: [
-            {value: 80, name: 'GC'},
-            {value: 20, name: '非GC'}
+            {value: 800, name: 'GC'},
+            {value: 200, name: 'Non GC'}
           ]
         }
       ]
@@ -118,25 +118,29 @@ module.exports = {
       },
       tooltip: {},
       legend: {
-        data: ['GC', '非GC'],
+        data: ['GC', 'Non GC'],
         top: '30'
       },
       xAxis: {
         type: 'category',
         data: ['Negotiated', 'Public rate', 'Wholesale Offline', 'Packages', 'Wholesale Online', 'Long Stay', 'Individual Others', 'Meetings/Incentives', 'Group Others', 'Tours', 'House Use', 'Permanent', 'Complimentary']
       },
-      yAxis: {},
+      yAxis: {
+        axisLabel: {
+        formatter: '{value}%'
+        }
+      },
       series: [{
         barMaxWidth: '70',
         name: 'GC',
         type: 'bar',
         stack: '细分统计',
-        data: [89, 35, 90, 46, 13, 35, 30, 9, 27, 21, 22, 10, 12]
+        data: [20, 10, 11.2, 6.3, 2.5, 2.1, 6.7, 1, 0.22, 1.1, 0.2, 1, 0.3]
       }, {
-        name: '非GC',
+        name: 'Non GC',
         type: 'bar',
         stack: '细分统计',
-        data: [45, 76, 8, 40, 55, 17, 19, 34, 13, 11, 5, 10, 7]
+        data: [10, 12, 9.9, 11.2, 12.3, 10, 1.2, 2.5, 2.1, 1.0, 0.9, 0.1, 0.2]
       }]
     }
     ddzChart.setOption(ddzOption)
@@ -151,23 +155,23 @@ module.exports = {
       },
       tooltip: {},
       legend: {
-        data: ['GC', '非GC'],
+        data: ['GC', 'Non GC'],
         top: '30'
       },
       xAxis: {
         type: 'category',
-        data: ['0-999', '1000-2999', '3000-4999', '5000-7999', '8000-9999', '10000-19999', '20000+']
+        data: ['0-999', '1000-2999', '3000-4999', '5000-7999', '8000-9999', '10000-19999', '>20000']
       },
       yAxis: {},
       series: [{
         barWidth: '40',
         name: 'GC',
         type: 'bar',
-        data: [5, 50, 60, 65, 34, 10, 8]
+        data: [55, 100, 130, 165, 184, 108, 58]
       }, {
-        name: '非GC',
+        name: 'Non GC',
         type: 'bar',
-        data: [30, 40, 20, 15, 5, 4, 2]
+        data: [40, 60, 30, 28, 19, 8, 5]
       }]
     }
     xfzChart.setOption(xfzOption)
