@@ -33,7 +33,7 @@
                     <th>RevPAS</th>
                     <th>Revenue</th>
                     <th>Covers</th>
-                    <th>AvgCheque/Cover</th>
+                    <th>AvgCheque<br/>Cover</th>
                     <th>RevPASH</th>
                     <th>Revenue</th>
                     <th>OOD Revenue</th>

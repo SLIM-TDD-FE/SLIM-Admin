@@ -21,7 +21,7 @@
         <div class="pull-left">
           <ul class="nav navbar-nav">
             <li class="dropdown messages-menu">
-              <a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">
+              <a href="/home" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">
                 <i class="fa">主页</i>
               </a>
               </li>
@@ -214,7 +214,7 @@
               <li class="pageLink" v-on:click="toggleMenu">
                 <router-link to="/FBSatis">
                   <i class="fa fa-circle-o"></i>
-                  <span class="page">F&B Satisfaction</span>
+                  <span class="page">F&B Satisfication</span>
                 </router-link>
               </li>
             </ul>

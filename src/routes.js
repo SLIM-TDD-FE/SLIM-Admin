@@ -34,87 +34,87 @@ const routes = [
         path: '/',
         component: HomeView,
         name: 'Home',
-        meta: {description: 'Overview of environment'}
+        meta: {description: ''}
       }, {
         path: '/dashboard',
         component: DashboardView,
         name: 'Dashboard',
-        meta: {description: 'Overview of environment'}
+        meta: {description: ''}
       }, {
         path: '/tables',
         component: TablesView,
         name: 'Tables',
-        meta: {description: 'Simple and advance table in CoPilot'}
+        meta: {description: ''}
       }, {
         path: '/home',
         component: HomeView,
         name: 'Home',
-        meta: {description: 'Home!!!'}
+        meta: {description: ''}
       }, {
         path: '/menu',
         component: MenuView,
         name: 'Menu',
-        meta: {description: 'Menu!!!'}
+        meta: {description: ''}
       }, {
         path: '/overview',
         component: OverviewView,
         name: 'Overview',
-        meta: {description: 'Menu!!!'}
+        meta: {description: ''}
       }, {
         path: '/summary',
         component: SummaryView,
         name: 'Summary',
-        meta: {description: 'Menu!!!'}
+        meta: {description: ''}
       }, {
         path: '/period',
         component: PeriodView,
         name: 'Period',
-        meta: {description: 'Menu!!!'}
+        meta: {description: ''}
       }, {
         path: '/FBSatis',
         component: FBSatisView,
-        name: 'FBSatis',
-        meta: {description: 'Menu!!!'}
+        name: 'F&B Satisfication',
+        meta: {description: ''}
       }, {
         path: '/property',
         component: PropertyView,
         name: 'Property',
-        meta: {description: 'Menu!!!'}
+        meta: {description: ''}
       }, {
         path: '/GC',
         component: GCView,
         name: 'GC',
-        meta: {description: 'Menu!!!'}
+        meta: {description: ''}
       }, {
         path: '/tasks',
         component: TasksView,
         name: 'Tasks',
-        meta: {description: 'Tasks page in the form of a timeline'}
+        meta: {description: ''}
       }, {
         path: '/demo',
         component: DemoView,
         name: 'Demos',
-        meta: {description: 'Demo!!!!'}
+        meta: {description: ''}
       }, {
         path: '/setting',
         component: SettingView,
         name: 'Settings',
-        meta: {description: 'User settings page'}
+        meta: {description: ''}
       }, {
         path: '/access',
         component: AccessView,
         name: 'Access',
-        meta: {description: 'Example of using maps'}
+        meta: {description: ''}
       }, {
         path: '/server',
         component: ServerView,
         name: 'Servers',
-        meta: {description: 'List of our servers'}
+        meta: {description: ''}
       }, {
         path: '/repos',
         component: ReposView,
         name: 'Repository',
-        meta: {description: 'List of popular javascript repos'}
+        meta: {description: ''}
       }
     ]
   }, {

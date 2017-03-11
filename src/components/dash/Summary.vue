@@ -2,15 +2,87 @@
   <section class="content">
     <div class="row">
       <div class="col-xs-12">
-        <div id="dzzx" style="height: 400px"></div>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-default">Yesterday</button>
+          <button type="button" class="btn btn-default">MTD</button>
+          <button type="button" class="btn btn-default">YTD</button>
+        </div>
+      </div>
+      <div class="col-xs-12">
+
+        <div class="box">
+          <div class="box-header">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand">餐厅: </a>
+              </div>
+              <div class="collapse navbar-collapse">
+                <form class="navbar-form navbar-left">
+                  <div class="btn-group" role="group" aria-label="...">
+                    <div class="btn-group" role="group">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        选择餐厅
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">一月</a></li>
+                        <li><a href="#">二月</a></li>
+                        <li><a href="#">三月</a></li>
+                        <li><a href="#">四月</a></li>
+                        <li><a href="#">五月</a></li>
+                        <li><a href="#">六月</a></li>
+                        <li><a href="#">七月</a></li>
+                        <li><a href="#">八月</a></li>
+                        <li><a href="#">九月</a></li>
+                        <li><a href="#">十月</a></li>
+                        <li><a href="#">十一月</a></li>
+                        <li><a href="#">十二月</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="btn-group" role="group" aria-label="...">
+                    <div class="btn-group" role="group">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        选择指标
+                        <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">一月</a></li>
+                        <li><a href="#">二月</a></li>
+                        <li><a href="#">三月</a></li>
+                        <li><a href="#">四月</a></li>
+                        <li><a href="#">五月</a></li>
+                        <li><a href="#">六月</a></li>
+                        <li><a href="#">七月</a></li>
+                        <li><a href="#">八月</a></li>
+                        <li><a href="#">九月</a></li>
+                        <li><a href="#">十月</a></li>
+                        <li><a href="#">十一月</a></li>
+                        <li><a href="#">十二月</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="btn-group rightFuck" role="group">
+                    <button type="button" class="btn btn-default">Day</button>
+                    <button type="button" class="btn btn-default">Week</button>
+                    <button type="button" class="btn btn-default">Month</button>
+                    <button type="button" class="btn btn-default">WOD</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="box-body">
+            <div class="col-xs-12">
+              <div id="dzzx" style="height: 400px"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12">
         <div class="box">
-          <div class="box-header">
-            <h3>11111</h3>
-          </div>
           <div class="box-body">
             <table class="table text-center table-bordered">
             <tbody>
@@ -106,44 +178,43 @@
       var dzzxChart = Echarts.init(document.getElementById('dzzx'), 'walden')
       var dzzxOption = {
         xAxis: [{
-          data: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Friday']
+          data: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
         }],
         yAxis: [{
-          name: 'Room',
+          name: 'Revenue',
           type: 'value'
         }, {
-          name: 'RevPPAR',
+          name: 'Avg Cheque',
           type: 'value'
         }],
+        legend: {
+          data: ['Avg Cheque', 'Non Alc Bev', 'Alc Bev', 'Food']
+        },
+        tooltip: {},
         series: [
           {
             type: 'line',
             yAxisIndex: '0',
-            data: [1, 3, 5, 6]
-          }, {
-            type: 'line',
-            yAxisIndex: '0',
-            data: [11, 32, 35, 46]
-          }, {
-            type: 'line',
-            yAxisIndex: '0',
-            data: [1, 32, 55, 16]
+            name: 'Avg Cheque',
+            data: [2556, 2841, 2206, 2276, 2035, 2402, 2151]
           }, {
             type: 'bar',
             yAxisIndex: '1',
-            data: [21, 3, 5, 76]
+            stack: 'all',
+            name: 'Food',
+            data: [293142, 243618, 244373, 271353, 288703, 302238, 284653]
           }, {
             type: 'bar',
             yAxisIndex: '1',
-            data: [1, 33, 45, 6]
+            stack: 'all',
+            name: 'Alc Bev',
+            data: [81989, 156499, 28635, 52707, 40500, 54626, 32721]
           }, {
             type: 'bar',
             yAxisIndex: '1',
-            data: [1, 23, 55, 63]
-          }, {
-            type: 'bar',
-            yAxisIndex: '1',
-            data: [1, 23, 55, 63]
+            stack: 'all',
+            name: 'Non Alc Bev',
+            data: [14924, 20292, 8741, 10621, 15333, 17575, 11907]
           }
         ]
       }
@@ -151,3 +222,8 @@
     }
   }
 </script>
+<style>
+  .rightFuck{
+    margin-left: 400px;
+  }
+</style>

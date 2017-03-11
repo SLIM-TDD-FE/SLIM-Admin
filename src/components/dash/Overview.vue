@@ -156,7 +156,8 @@ module.exports = {
       },
       xAxis: [
         {
-          type: 'value'
+          type: 'value',
+          name: 'RMB'
         }
       ],
       yAxis: [
@@ -326,50 +327,104 @@ module.exports = {
     zh2Chart.setOption(zh2Option)
 
     // 职业占比排名
-    var subzChart = Echarts.init(document.getElementById('subz'), 'walden')
-    var subzOption = {
+    // var subzChart = Echarts.init(document.getElementById('subz'), 'walden')
+    // var subzOption = {
+    //   tooltip: {
+    //     formatter: '{b}{a}\n{c}%'
+    //   },
+    //   legend: {
+    //     data: ['系列1', '系列2'],
+    //   },
+    //   xAxis: {
+    //     type: 'category',
+    //     data: ['IT互联网', '政府', '电子', '服务业', '旅游业']
+    //   },
+    //   yAxis: {
+    //     axisLabel: {
+    //       formatter: '{value}%'
+    //     }
+    //   },
+    //   series: [{
+    //     barMaxWidth: '50',
+    //     name: '系列1',
+    //     label: {
+    //       normal: {
+    //         show: true,
+    //         position: 'inside',
+    //         formatter: '{c}%'
+    //       }
+    //     },
+    //     type: 'bar',
+    //     data: ['15', '13', '11', '7.5', '3']
+    //   }, {
+    //     barMaxWidth: '50',
+    //     name: '系列2',
+    //     label: {
+    //       normal: {
+    //         show: true,
+    //         position: 'inside',
+    //         formatter: '{c}%'
+    //       }
+    //     },
+    //     type: 'bar',
+    //     data: ['15', '13', '11', '7.5', '3']
+    //   }]
+    // }
+    // subzChart.setOption(subzOption)
+
+    var pop1Chart = Echarts.init(document.getElementById('subz'), 'walden')
+    var pop1Option = {
       tooltip: {
-        formatter: '{b}{a}\n{c}%'
-      },
-      legend: {
-        data: ['系列1', '系列2'],
-      },
-      xAxis: {
-        type: 'category',
-        data: ['IT互联网', '政府', '电子', '服务业', '旅游业']
-      },
-      yAxis: {
-        axisLabel: {
-          formatter: '{value}%'
+        trigger: 'axis',
+        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+          type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
         }
       },
-      series: [{
-        barMaxWidth: '50',
-        name: '系列1',
-        label: {
-          normal: {
-            show: true,
-            position: 'inside',
-            formatter: '{c}%'
-          }
-        },
-        type: 'bar',
-        data: ['15', '13', '11', '7.5', '3']
-      }, {
-        barMaxWidth: '50',
-        name: '系列2',
-        label: {
-          normal: {
-            show: true,
-            position: 'inside',
-            formatter: '{c}%'
-          }
-        },
-        type: 'bar',
-        data: ['15', '13', '11', '7.5', '3']
-      }]
+      legend: {
+        data: ['CFG Grill 79', 'FB1 Atmosphere', 'FB2 Noodle Bar', 'FS2 The Red Chamber', 'JPN Nadaman']
+      },
+      xAxis: [
+        {
+          type: 'value',
+          name: 'Seat Occupancy'
+        }
+      ],
+      yAxis: [
+        {
+          type: 'value',
+          name: 'Avg Cheque per cover'
+        }
+      ],
+      series: [
+        {
+          name: 'CFG Grill 79',
+          type: 'scatter',
+          symbolSize: 30,
+          data: [[70, 230]]
+        }, {
+          name: 'FB1 Atmosphere',
+          type: 'scatter',
+          symbolSize: 30,
+          data: [[46, 100]]
+        }, {
+          name: 'FB2 Noodle Bar',
+          type: 'scatter',
+          symbolSize: 30,
+          data: [[15, 190]]
+        }, {
+          name: 'FS2 The Red Chamber',
+          type: 'scatter',
+          symbolSize: 30,
+          data: [[40, 90]]
+        }, {
+          name: 'JPN Nadaman',
+          type: 'scatter',
+          symbolSize: 30,
+          data: [[87, 60]]
+        }
+      ]
     }
-    subzChart.setOption(subzOption)
+    pop1Chart.setOption(pop1Option)
   }
 }
 </script>

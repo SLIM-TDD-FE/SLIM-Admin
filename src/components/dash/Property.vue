@@ -48,6 +48,11 @@
       <div class="col-xs-4">
         <div id="purGC" style="height:400px;"></div>
       </div>
+      <div class="btn-group left50" role="group">
+        <button type="button" class="btn btn-default">GC</button>
+        <button type="button" class="btn btn-default">Non GC</button>
+        <button type="button" class="btn btn-default">All</button>
+      </div>
     </div>
     <!-- 职业分布 -->
     <div class="row">
@@ -104,12 +109,15 @@ module.exports = {
         trigger: 'item',
         formatter: '{a} <br/>{b}: {c} {d}%'
       },
+      legend: {
+        data: ['0-19', '19-29', '30-39', '40-59', '>60']
+      },
       series: [
         {
           name: '年龄分布',
           type: 'pie',
           selectedMode: 'single',
-          radius: [0, '40%'],
+          radius: [0, '80%'],
           label: {
             normal: {
               position: 'inner'
@@ -121,42 +129,11 @@ module.exports = {
             }
           },
           data: [
-            {value: 3, name: '0-19'},
-            {value: 10, name: '19-29'},
-            {value: 35, name: '30-39'},
-            {value: 45, name: '40-59'},
-            {value: 7, name: '>60'}
-          ]
-        }, {
-          name: 'GC占比',
-          type: 'pie',
-          selectedMode: 'single',
-          radius: ['40%', '50%'],
-          label: {
-            normal: {
-              // position: 'inner',
-              formatter: function (params) {
-                var data = params.data
-                return data.name + '\n' + (data.value / data.all * 100).toFixed(2) + '%'
-              }
-            }
-          },
-          labelLine: {
-            normal: {
-              show: true
-            }
-          },
-          data: [
-            {value: 60, name: 'GC', all: 679},
-            {value: 40, name: '非GC', all: 679},
-            {value: 20, name: 'GC', all: 679},
-            {value: 80, name: '非GC', all: 679},
-            {value: 25, name: 'GC', all: 679},
-            {value: 75, name: '非GC', all: 679},
-            {value: 30, name: 'GC', all: 679},
-            {value: 70, name: '非GC', all: 679},
-            {value: 60, name: 'GC', all: 679},
-            {value: 40, name: '非GC', all: 679}
+            {value: 10, name: '0-19'},
+            {value: 40, name: '19-29'},
+            {value: 100, name: '30-39'},
+            {value: 130, name: '40-59'},
+            {value: 50, name: '>60'}
           ]
         }
       ]
