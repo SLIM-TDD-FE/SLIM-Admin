@@ -21,9 +21,11 @@
         <div class="pull-left">
           <ul class="nav navbar-nav">
             <li class="dropdown messages-menu">
+              <router-link to="/home">
               <a href="/home" data-toggle="dropdown" class="dropdown-toggle" aria-expanded="false">
                 <i class="fa">主页</i>
               </a>
+              </router-link>
               </li>
             <li class="dropdown notifications-menu">
               <a href="javascript:;" data-toggle="dropdown" class="dropdown-toggle">
@@ -351,6 +353,9 @@ module.exports = {
 
       // Add it to the item that was clicked
       event.toElement.parentElement.className = 'pageLink active'
+    },
+    goHome: function () {
+      window.location.href = '/home'
     }
   },
   mounted: function () {
@@ -368,5 +373,8 @@ hr.visible-xs-block {
   background-color: rgba(0, 0, 0, 0.17);
   height: 1px;
   border-color: transparent;
+}
+.fa {
+  color: #ffffff;
 }
 </style>
