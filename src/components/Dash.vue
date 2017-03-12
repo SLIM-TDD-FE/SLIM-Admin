@@ -7,7 +7,7 @@
         <!-- logo for regular state and mobile devices -->
         <div class="container logo-lg">
           <div class="pull-left image"><img src="/static/img/logo_sm.png" alt="Logo" class="img-responsive"></div>
-          <div class="pull-left info">CoPilot</div>
+          <div class="pull-left info">&nbsp;&nbsp;Shangri-la.com</div>
         </div>
       </a>
 
@@ -295,7 +295,7 @@
 
     <!-- Main Footer -->
     <footer class="main-footer">
-      <strong>Copyright &copy; {{year}} <a href="javascript:;">CoPilot</a>.</strong> All rights reserved.
+      <strong>Copyright &copy; {{year}} <a href="javascript:;">Shangri-la</a>.</strong> All rights reserved.
     </footer>
   </div>
   <!-- ./wrapper -->
